@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct PlaylistScrollView: View {
+    let nfts: [String]
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(0..<5, id:\.self) { _ in
-                    RoundedRectangle(cornerRadius: 6.0)
+                ForEach(nfts, id:\.self) { nft in
+                    Image(nft)
+                        .resizable()
+                        .scaledToFit()
                         .frame(width: 110, height: 110)
                 }
             }
@@ -26,5 +30,5 @@ struct PlaylistScrollView: View {
 }
 
 #Preview {
-    PlaylistScrollView()
+    PlaylistScrollView(nfts: RizzOnboarding.discover[0].NFTs)
 }

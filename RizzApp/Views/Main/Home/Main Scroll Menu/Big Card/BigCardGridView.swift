@@ -13,6 +13,7 @@ struct BigCardGridView: View {
             ForEach(0..<33, id:\.self) { _ in
                 BigCardView()
             }
+            .padding(.bottom, 140)
         }
     }
 }

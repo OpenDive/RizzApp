@@ -16,6 +16,7 @@ struct RizzColors {
     static let rizzGray = Color("RizzGray")
     static let rizzLightGray = Color("RizzLightGray")
     static let rizzMatteBlack = Color("RizzMatteBlack")
+    static let rizzNeonBlue = Color("RizzNeonBlue")
 }
 
 struct RizzOnboarding {
@@ -41,6 +42,21 @@ struct RizzOnboarding {
             description: "Sign in below using WalletConnect."
         )
     ]
+    
+    static let discover: [Collection] = [
+        Collection(title: "Bored Ape Yacht Club", logo: "BAYCLogo", NFTs: ["BAYC1"]),
+        Collection(title: "Cool Cats", logo: "CoolCatLogo", NFTs: ["CoolCat1", "CoolCat2"]),
+        Collection(title: "Robotos", logo: "RobotosLogo", NFTs: ["Robotos1"]),
+        Collection(title: "Rare Pizza Boxes", logo: "PizzaBoxLogo", NFTs: ["PizzaBox1", "PizzaBox2", "PizzaBox3", "PizzaBox4", "PizzaBox5"]),
+        Collection(title: "Real Punks", logo: "RealPunkLogo", NFTs: ["RealPunk1", "RealPunk2", "RealPunk3"])
+    ]
+}
+
+struct Collection: Identifiable {
+    let title: String
+    let logo: String
+    let NFTs: [String]
+    let id = UUID().uuidString
 }
 
 struct FeatureItem: Hashable, Identifiable {

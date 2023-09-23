@@ -16,6 +16,7 @@ struct MasonryGridView: View {
                     MasonryCardView()
                 }
             }
+            .padding(.bottom, 140)
         }
         .padding(.horizontal, 8)
     }

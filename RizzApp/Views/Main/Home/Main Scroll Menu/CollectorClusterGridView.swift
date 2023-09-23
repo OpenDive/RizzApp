@@ -21,6 +21,7 @@ struct CollectorClusterGridView: View {
                         .frame(width: side, height: side)
                 }
             }
+            .padding(.bottom, 140)
         }
         .padding(.horizontal, 44)
     }

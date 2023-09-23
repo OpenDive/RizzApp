@@ -17,8 +17,6 @@ struct HomeView: View {
                 // My NFTs
                 MyNFTsView()
             }
-            
-            FloatingActionButtonView()
         }
     }
 }

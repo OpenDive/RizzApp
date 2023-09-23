@@ -12,6 +12,7 @@ struct RizzAppApp: App {
     @State private var isOnSplashscreen = true
     
     @StateObject var authViewModel = AuthViewModel.instance
+    @StateObject var appearenceViewModel = AppearenceViewModel.instance
     
     var body: some Scene {
         WindowGroup {
@@ -26,7 +27,9 @@ struct RizzAppApp: App {
                     }
             } else {
                 if self.authViewModel.hasConnectedWallet {
-                    EmptyView()
+                    AppTabView()
+                        .environmentObject(self.authViewModel)
+                        .environmentObject(self.appearenceViewModel)
                 } else {
                     PreviewFeaturesView()
                         .environmentObject(self.authViewModel)

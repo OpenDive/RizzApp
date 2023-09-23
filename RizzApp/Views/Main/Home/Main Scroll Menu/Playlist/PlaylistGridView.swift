@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct PlaylistGridView: View {
+    let discover = RizzOnboarding.discover
+    
     var body: some View {
         VStack {
             ScrollView(.vertical) {
-                ForEach(0..<10, id:\.self) { _ in
-                    PlaylistCategoryView()
+                ForEach(discover) { category in
+                    PlaylistCategoryView(category: category)
                 }
+                .padding(.bottom, 140)
             }
         }
     }

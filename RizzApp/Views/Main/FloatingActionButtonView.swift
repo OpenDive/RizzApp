@@ -8,35 +8,55 @@
 import SwiftUI
 
 struct FloatingActionButtonView: View {
+    @Binding var index: Int
+    
     var body: some View {
         VStack {
             Spacer()
             
             HStack {
                 HStack {
-                    Image(systemName: "arkit")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .padding(.leading, 4)
+                    Button {
+                        index = 0
+                    } label: {
+                        VStack {
+                            Image(systemName: "square.grid.3x3.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                            
+                            Text("Collections")
+                        }
+                    }
+                    .foregroundStyle(self.index == 0 ? RizzColors.rizzNeonBlue : RizzColors.rizzLightGray)
                     
-                    Image(systemName: "arkit")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
+                    Button {
+                        index = 1
+                    } label: {
+                        VStack {
+                            Image(systemName: "ticket.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                            
+                            Text("Events")
+                        }
                         .padding(.leading, 30)
+                    }
+                    .foregroundStyle(self.index == 1 ? RizzColors.rizzNeonBlue : RizzColors.rizzLightGray)
                 }
+                .padding(26)
                 .background {
                     Capsule()
-                        .foregroundStyle(RizzColors.rizzBlue)
-                        .frame(width: 190, height: 110)
+                        .foregroundStyle(RizzColors.rizzGray)
                 }
-                .padding(.leading, 40)
+                .padding(.leading, 14)
                 
                 Spacer()
                 
-                Circle()
-                    .foregroundStyle(RizzColors.rizzBlue)
+                Image("AddButton")
+                    .resizable()
+                    .scaledToFit()
                     .frame(width: 110, height: 110)
                     .padding(.trailing, 20)
             }
@@ -44,6 +64,14 @@ struct FloatingActionButtonView: View {
     }
 }
 
+struct FloatingActionPreview: View {
+    @State private var index: Int = 0
+    
+    var body: some View {
+        FloatingActionButtonView(index: $index)
+    }
+}
+
 #Preview {
-    FloatingActionButtonView()
+    FloatingActionPreview()
 }

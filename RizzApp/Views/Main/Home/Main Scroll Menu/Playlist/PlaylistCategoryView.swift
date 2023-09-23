@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PlaylistCategoryView: View {
+    let category: Collection
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12.0)
@@ -15,8 +17,8 @@ struct PlaylistCategoryView: View {
                 .foregroundStyle(RizzColors.rizzLightGray)
             
             VStack {
-                PlaylistCategoryHeaderView()
-                PlaylistScrollView()
+                PlaylistCategoryHeaderView(name: category.title, amount: category.NFTs.count, icon: category.logo)
+                PlaylistScrollView(nfts: category.NFTs)
             }
         }
         .padding(.vertical, 0.25)
@@ -24,5 +26,5 @@ struct PlaylistCategoryView: View {
 }
 
 #Preview {
-    PlaylistCategoryView()
+    PlaylistCategoryView(category: RizzOnboarding.discover[0])
 }

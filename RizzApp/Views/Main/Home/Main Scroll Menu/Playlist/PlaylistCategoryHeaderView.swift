@@ -8,27 +8,35 @@
 import SwiftUI
 
 struct PlaylistCategoryHeaderView: View {
+    let name: String
+    let amount: Int
+    let icon: String
+    
     var body: some View {
         VStack {
             HStack {
                 ZStack {
-                    Circle()
+                    Image(icon)
+                        .resizable()
+                        .scaledToFit()
                         .frame(width: 50, height: 50)
                     
-                    Circle()
+                    Image("EthLogo")
+                        .resizable()
+                        .scaledToFit()
                         .foregroundStyle(.white)
                         .frame(width: 16, height: 16)
                         .padding(.top, 30)
                         .padding(.leading, 30)
                 }
                 
-                Text("Lorum Ipsum")
+                Text(name)
                     .font(.title2)
                     .bold()
                     .foregroundStyle(RizzColors.rizzWhite)
                     .padding(.leading, 15)
                 
-                Text(" (99)")
+                Text(" (\(amount))")
                     .font(.subheadline)
                     .foregroundStyle(.gray)
                 
@@ -45,5 +53,5 @@ struct PlaylistCategoryHeaderView: View {
 
 
 #Preview {
-    PlaylistCategoryHeaderView()
+    PlaylistCategoryHeaderView(name: "Cool Cats", amount: 99, icon: "CoolCatLogo")
 }

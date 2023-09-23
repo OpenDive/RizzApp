@@ -17,8 +17,6 @@ struct EventsView: View {
                 
                 Spacer()
             }
-            
-            FloatingActionButtonView()
         }
     }
 }
@@ -46,11 +44,13 @@ struct EventItemView: View {
             
             Text("Lorum Ipsum")
                 .font(.system(size: 24))
+                .foregroundStyle(RizzColors.rizzWhite)
                 .bold()
             
             Spacer()
             
             Text("Sep. 24")
+                .foregroundStyle(RizzColors.rizzWhite)
                 .padding(.trailing, 30)
         }
         .padding(.horizontal)
@@ -58,7 +58,7 @@ struct EventItemView: View {
         .background {
             RoundedRectangle(cornerRadius: 12.0)
                 .frame(width: UIScreen.main.bounds.width - 40)
-                .foregroundStyle(RizzColors.rizzPink)
+                .foregroundStyle(RizzColors.rizzMatteBlack)
         }
     }
 }
