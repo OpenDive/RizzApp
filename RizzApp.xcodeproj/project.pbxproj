@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D64AA3A2ABE7D1000EBE52E /* RizAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA392ABE7D1000EBE52E /* RizAppApp.swift */; };
+		7D64AA3A2ABE7D1000EBE52E /* RizzAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */; };
 		7D64AA3C2ABE7D1000EBE52E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA3B2ABE7D1000EBE52E /* ContentView.swift */; };
 		7D64AA3E2ABE7D1200EBE52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */; };
 		7D64AA412ABE7D1200EBE52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA402ABE7D1200EBE52E /* Preview Assets.xcassets */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		7D64AA362ABE7D1000EBE52E /* RizzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D64AA392ABE7D1000EBE52E /* RizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RizAppApp.swift; sourceTree = "<group>"; };
+		7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RizzAppApp.swift; sourceTree = "<group>"; };
 		7D64AA3B2ABE7D1000EBE52E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D64AA402ABE7D1200EBE52E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 				7D64AA492ABE901C00EBE52E /* Models */,
 				7D64AA482ABE901500EBE52E /* View Models */,
 				7D64AA472ABE900F00EBE52E /* Views */,
-				7D64AA392ABE7D1000EBE52E /* RizAppApp.swift */,
+				7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */,
 				7D64AA3B2ABE7D1000EBE52E /* ContentView.swift */,
 				7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */,
 				7D64AA3F2ABE7D1200EBE52E /* Preview Content */,
@@ -204,7 +204,7 @@
 				7D64AA512ABE974E00EBE52E /* PreviewFeaturesView.swift in Sources */,
 				7D64AA3C2ABE7D1000EBE52E /* ContentView.swift in Sources */,
 				7D64AA562ABEB0C300EBE52E /* FeatureItemView.swift in Sources */,
-				7D64AA3A2ABE7D1000EBE52E /* RizAppApp.swift in Sources */,
+				7D64AA3A2ABE7D1000EBE52E /* RizzAppApp.swift in Sources */,
 				7D64AA4C2ABE903300EBE52E /* SplashScreenView.swift in Sources */,
 				7D64AA4F2ABE924700EBE52E /* Constants.swift in Sources */,
 			);

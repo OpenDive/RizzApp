@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct RizAppApp: App {
+struct RizzAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
