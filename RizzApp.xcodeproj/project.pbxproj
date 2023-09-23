@@ -11,14 +11,24 @@
 		7D64AA3C2ABE7D1000EBE52E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA3B2ABE7D1000EBE52E /* ContentView.swift */; };
 		7D64AA3E2ABE7D1200EBE52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */; };
 		7D64AA412ABE7D1200EBE52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA402ABE7D1200EBE52E /* Preview Assets.xcassets */; };
+		7D64AA4C2ABE903300EBE52E /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA4B2ABE903300EBE52E /* SplashScreenView.swift */; };
+		7D64AA4F2ABE924700EBE52E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA4E2ABE924700EBE52E /* Constants.swift */; };
+		7D64AA512ABE974E00EBE52E /* PreviewFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA502ABE974E00EBE52E /* PreviewFeaturesView.swift */; };
+		7D64AA542ABE98DD00EBE52E /* FeatureItemCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA532ABE98DD00EBE52E /* FeatureItemCarouselView.swift */; };
+		7D64AA562ABEB0C300EBE52E /* FeatureItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA552ABEB0C300EBE52E /* FeatureItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D64AA362ABE7D1000EBE52E /* RizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D64AA362ABE7D1000EBE52E /* RizzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D64AA392ABE7D1000EBE52E /* RizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RizAppApp.swift; sourceTree = "<group>"; };
 		7D64AA3B2ABE7D1000EBE52E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D64AA402ABE7D1200EBE52E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7D64AA4B2ABE903300EBE52E /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		7D64AA4E2ABE924700EBE52E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7D64AA502ABE974E00EBE52E /* PreviewFeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFeaturesView.swift; sourceTree = "<group>"; };
+		7D64AA532ABE98DD00EBE52E /* FeatureItemCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureItemCarouselView.swift; sourceTree = "<group>"; };
+		7D64AA552ABEB0C300EBE52E /* FeatureItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +45,7 @@
 		7D64AA2D2ABE7D1000EBE52E = {
 			isa = PBXGroup;
 			children = (
-				7D64AA382ABE7D1000EBE52E /* RizApp */,
+				7D64AA382ABE7D1000EBE52E /* RizzApp */,
 				7D64AA372ABE7D1000EBE52E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +53,24 @@
 		7D64AA372ABE7D1000EBE52E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D64AA362ABE7D1000EBE52E /* RizApp.app */,
+				7D64AA362ABE7D1000EBE52E /* RizzApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7D64AA382ABE7D1000EBE52E /* RizApp */ = {
+		7D64AA382ABE7D1000EBE52E /* RizzApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D64AA4D2ABE923A00EBE52E /* Utils */,
+				7D64AA492ABE901C00EBE52E /* Models */,
+				7D64AA482ABE901500EBE52E /* View Models */,
+				7D64AA472ABE900F00EBE52E /* Views */,
 				7D64AA392ABE7D1000EBE52E /* RizAppApp.swift */,
 				7D64AA3B2ABE7D1000EBE52E /* ContentView.swift */,
 				7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */,
 				7D64AA3F2ABE7D1200EBE52E /* Preview Content */,
 			);
-			path = RizApp;
+			path = RizzApp;
 			sourceTree = "<group>";
 		};
 		7D64AA3F2ABE7D1200EBE52E /* Preview Content */ = {
@@ -67,12 +81,61 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7D64AA472ABE900F00EBE52E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D64AA4A2ABE902200EBE52E /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D64AA482ABE901500EBE52E /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		7D64AA492ABE901C00EBE52E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D64AA4A2ABE902200EBE52E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7D64AA522ABE98C900EBE52E /* Preview Features */,
+				7D64AA4B2ABE903300EBE52E /* SplashScreenView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		7D64AA4D2ABE923A00EBE52E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7D64AA4E2ABE924700EBE52E /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7D64AA522ABE98C900EBE52E /* Preview Features */ = {
+			isa = PBXGroup;
+			children = (
+				7D64AA502ABE974E00EBE52E /* PreviewFeaturesView.swift */,
+				7D64AA532ABE98DD00EBE52E /* FeatureItemCarouselView.swift */,
+				7D64AA552ABEB0C300EBE52E /* FeatureItemView.swift */,
+			);
+			path = "Preview Features";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D64AA352ABE7D1000EBE52E /* RizApp */ = {
+		7D64AA352ABE7D1000EBE52E /* RizzApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D64AA442ABE7D1200EBE52E /* Build configuration list for PBXNativeTarget "RizApp" */;
+			buildConfigurationList = 7D64AA442ABE7D1200EBE52E /* Build configuration list for PBXNativeTarget "RizzApp" */;
 			buildPhases = (
 				7D64AA322ABE7D1000EBE52E /* Sources */,
 				7D64AA332ABE7D1000EBE52E /* Frameworks */,
@@ -82,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = RizApp;
-			productName = RizApp;
-			productReference = 7D64AA362ABE7D1000EBE52E /* RizApp.app */;
+			name = RizzApp;
+			productName = RizzApp;
+			productReference = 7D64AA362ABE7D1000EBE52E /* RizzApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7D64AA312ABE7D1000EBE52E /* Build configuration list for PBXProject "RizApp" */;
+			buildConfigurationList = 7D64AA312ABE7D1000EBE52E /* Build configuration list for PBXProject "RizzApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +178,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D64AA352ABE7D1000EBE52E /* RizApp */,
+				7D64AA352ABE7D1000EBE52E /* RizzApp */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D64AA542ABE98DD00EBE52E /* FeatureItemCarouselView.swift in Sources */,
+				7D64AA512ABE974E00EBE52E /* PreviewFeaturesView.swift in Sources */,
 				7D64AA3C2ABE7D1000EBE52E /* ContentView.swift in Sources */,
+				7D64AA562ABEB0C300EBE52E /* FeatureItemView.swift in Sources */,
 				7D64AA3A2ABE7D1000EBE52E /* RizAppApp.swift in Sources */,
+				7D64AA4C2ABE903300EBE52E /* SplashScreenView.swift in Sources */,
+				7D64AA4F2ABE924700EBE52E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +339,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RizApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RizzApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 8GNE6ML5WX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,10 +369,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RizApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RizzApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 8GNE6ML5WX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -325,7 +395,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D64AA312ABE7D1000EBE52E /* Build configuration list for PBXProject "RizApp" */ = {
+		7D64AA312ABE7D1000EBE52E /* Build configuration list for PBXProject "RizzApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D64AA422ABE7D1200EBE52E /* Debug */,
@@ -334,7 +404,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D64AA442ABE7D1200EBE52E /* Build configuration list for PBXNativeTarget "RizApp" */ = {
+		7D64AA442ABE7D1200EBE52E /* Build configuration list for PBXNativeTarget "RizzApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D64AA452ABE7D1200EBE52E /* Debug */,

@@ -14,7 +14,7 @@ struct PreviewFeaturesView: View {
                 .resizable()
                 .ignoresSafeArea()
             
-            
+            FeatureItemCarouselView()
         }
     }
 }
