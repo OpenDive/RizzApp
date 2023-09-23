@@ -1,2 +1,3 @@
-# BoapItApp
-ETH New York 2023 Submission - An app that demonstrates BOAP in action
+# RIZz Protocol & App
+RIZz protocol is the only decentralized events protocol that slaps.
+
