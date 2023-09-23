@@ -1,18 +1,3 @@
-/*
-
- ██████  ██████   ██████  ██   ██ ██████   ██████   ██████  ██   ██    ██████  ███████ ██    ██
-██      ██    ██ ██    ██ ██  ██  ██   ██ ██    ██ ██    ██ ██  ██     ██   ██ ██      ██    ██
-██      ██    ██ ██    ██ █████   ██████  ██    ██ ██    ██ █████      ██   ██ █████   ██    ██
-██      ██    ██ ██    ██ ██  ██  ██   ██ ██    ██ ██    ██ ██  ██     ██   ██ ██       ██  ██
- ██████  ██████   ██████  ██   ██ ██████   ██████   ██████  ██   ██ ██ ██████  ███████   ████
-
-Find any smart contract, and build your project faster: https://www.cookbook.dev
-Twitter: https://twitter.com/cookbook_dev
-Discord: https://discord.gg/WzsfPcfHrk
-
-Find this contract on Cookbook: https://www.cookbook.dev/contracts/multi-collection-nft-with-pausable-transfers?utm=code
-*/
-
 // SPDX-License-Identifier: UNLICENSED
 
 pragma solidity ^0.8.4;
@@ -23,17 +8,11 @@ import "./dependencies/Pausable.sol";
 import "./dependencies/ERC1155Burnable.sol";
 import "./dependencies/ERC1155Supply.sol";
 import "./dependencies/MerkleProof.sol";
+import "./dependencies/ECDSA.sol";
 
 /**
- * @title Multi-Collection NFT with pausable transfers
- * @author Breakthrough Labs Inc.
- * @notice NFT, ERC1155, Pausable
- * @custom:version 1.0.7
- * @custom:address 18
- * @custom:default-precision 0
- * @custom:simple-description An NFT that supports creating multiple collections,
- * with ability for owner to pause NFT transfers.
- * @dev ERC1155 NFT, the basic standard multi-token, with the following features:
+ * @title Rizz Multi-Collection NFT with pausable transfers
+
  *
  *  - Owner can pause or unpause NFT transfers.
  *  - Adjustable metadata.
@@ -45,7 +24,11 @@ interface URIResolver {
 }
 
 contract RizzaERC1155 is ERC1155, ERC1155Supply {
+    using ECDSA for bytes32;
+
     constructor() payable ERC1155("") {}
+
+    string version = "V0";
 
     mapping(uint256 => bool) public soulbound;
     mapping(uint256 => string) public uris;
@@ -68,6 +51,10 @@ contract RizzaERC1155 is ERC1155, ERC1155Supply {
         address _admin;
     }
 
+    function getContractHash() public view returns (bytes32) {
+        return keccak256(abi.encode(version, block.chainid, address(this)));
+    }
+
     function createMint(Config memory c) public {
         uint256 id = generateID(msg.sender, nonces[msg.sender]);
         nonces[msg.sender]++;
@@ -88,7 +75,7 @@ contract RizzaERC1155 is ERC1155, ERC1155Supply {
         soulbound[id] = c._soulbound;
     }
 
-    function generateID(address a, uint256 n) internal returns (uint256) {
+    function generateID(address a, uint256 n) internal pure returns (uint256) {
         return
             uint256(uint160(uint256(keccak256(abi.encode(a))))) * 10 ** 9 + n;
     }
@@ -109,12 +96,14 @@ contract RizzaERC1155 is ERC1155, ERC1155Supply {
         bytes memory sig,
         bytes32[] calldata proof
     ) external {
-        address signer = recover_sig(receiver, id, sig);
+        address signer = recover_signer(receiver, id, sig);
         require(
             verify_proof(signer, merkle_roots[id], proof),
             "invalid signer"
         );
         require(reedemed[id][receiver] == false, "code has been used");
+        require(remaining_mints[id] >= 1, "no mints left");
+        remaining_mints[id] -= 1;
         reedemed[id][receiver] = true;
         _mint(receiver, id, 1, "");
     }
@@ -123,17 +112,25 @@ contract RizzaERC1155 is ERC1155, ERC1155Supply {
         address a,
         bytes32 merkleroot,
         bytes32[] calldata proof
-    ) internal returns (bool) {
+    ) internal pure returns (bool) {
         bytes32 leaf = keccak256(abi.encodePacked(a));
         return MerkleProof.verifyCalldata(proof, merkleroot, leaf);
     }
 
-    function recover_sig(
+    function recover_signer(
         address receiver,
         uint256 id,
         bytes memory sig
     ) internal view returns (address) {
+        hashMint(receiver, id).toEthSignedMessageHash().recover(sig);
         return address(0);
+    }
+
+    function hashMint(
+        address receiver,
+        uint256 id
+    ) internal view returns (bytes32) {
+        return keccak256(abi.encode(getContractHash(), receiver, id));
     }
 
     function admint_mint_update(
