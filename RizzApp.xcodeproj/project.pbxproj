@@ -127,6 +127,7 @@
 		7D64AA472ABE900F00EBE52E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D8DED0E2ABEE00C0094A71E /* Home */,
 				7D64AA4A2ABE902200EBE52E /* Onboarding */,
 			);
 			path = Views;
@@ -150,7 +151,6 @@
 		7D64AA4A2ABE902200EBE52E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				7D8DED0E2ABEE00C0094A71E /* Home */,
 				7D64AA522ABE98C900EBE52E /* Preview Features */,
 				7D64AA4B2ABE903300EBE52E /* SplashScreenView.swift */,
 			);
