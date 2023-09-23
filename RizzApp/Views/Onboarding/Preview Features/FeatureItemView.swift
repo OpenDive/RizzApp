@@ -28,6 +28,7 @@ struct FeatureItemView: View {
                     .padding(.top, 380)
                 
                 Text(feature.description)
+                    .foregroundStyle(RizzColors.rizzWhite)
                     .multilineTextAlignment(.center)
                     .padding(.top, 4)
                     .font(.headline)
