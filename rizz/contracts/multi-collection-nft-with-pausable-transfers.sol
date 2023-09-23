@@ -22,6 +22,7 @@ import "./dependencies/Ownable.sol";
 import "./dependencies/Pausable.sol";
 import "./dependencies/ERC1155Burnable.sol";
 import "./dependencies/ERC1155Supply.sol";
+import "./dependencies/MerkleProof.sol";
 
 /**
  * @title Multi-Collection NFT with pausable transfers
@@ -55,7 +56,7 @@ contract RizzaERC1155 is ERC1155, ERC1155Supply {
     mapping(uint256 => bytes32) public merkle_roots;
     mapping(uint256 => address) public proxyminter;
     mapping(uint256 => address) public admins;
-
+    mapping(uint256 => mapping(address => bool)) reedemed;
     struct Config {
         uint256 _limit;
         bool _soulbound;
@@ -106,9 +107,33 @@ contract RizzaERC1155 is ERC1155, ERC1155Supply {
         address receiver,
         uint256 id,
         bytes memory sig,
-        bytes memory proof
+        bytes32[] calldata proof
     ) external {
+        address signer = recover_sig(receiver, id, sig);
+        require(
+            verify_proof(signer, merkle_roots[id], proof),
+            "invalid signer"
+        );
+        require(reedemed[id][receiver] == false, "code has been used");
+        reedemed[id][receiver] = true;
         _mint(receiver, id, 1, "");
+    }
+
+    function verify_proof(
+        address a,
+        bytes32 merkleroot,
+        bytes32[] calldata proof
+    ) internal returns (bool) {
+        bytes32 leaf = keccak256(abi.encodePacked(a));
+        return MerkleProof.verifyCalldata(proof, merkleroot, leaf);
+    }
+
+    function recover_sig(
+        address receiver,
+        uint256 id,
+        bytes memory sig
+    ) internal view returns (address) {
+        return address(0);
     }
 
     function admint_mint_update(
