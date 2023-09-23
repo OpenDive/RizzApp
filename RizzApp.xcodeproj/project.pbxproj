@@ -42,6 +42,7 @@
 		7D8DED442ABF464B0094A71E /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED432ABF464B0094A71E /* UIImage+extension.swift */; };
 		7D8DED462ABF4EAE0094A71E /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED452ABF4EAE0094A71E /* UIColor+extension.swift */; };
 		7D8DED482ABF5AF50094A71E /* NFTTopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED472ABF5AF50094A71E /* NFTTopDetailView.swift */; };
+		7D8DED4D2ABF5D090094A71E /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED4C2ABF5D090094A71E /* EventsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		7D8DED432ABF464B0094A71E /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		7D8DED452ABF4EAE0094A71E /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		7D8DED472ABF5AF50094A71E /* NFTTopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTTopDetailView.swift; sourceTree = "<group>"; };
+		7D8DED4C2ABF5D090094A71E /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +137,8 @@
 		7D64AA472ABE900F00EBE52E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D8DED4A2ABF5CF40094A71E /* Main */,
 				7D8DED3F2ABF3F890094A71E /* NFT Detail */,
-				7D8DED0E2ABEE00C0094A71E /* Home */,
 				7D64AA4A2ABE902200EBE52E /* Onboarding */,
 			);
 			path = Views;
@@ -191,9 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				7D8DED3B2ABF39D00094A71E /* Main Scroll Menu */,
-				7D8DED3A2ABF398A0094A71E /* Navigation Bar */,
 				7D8DED0F2ABEE0370094A71E /* HomeView.swift */,
-				7D8DED2E2ABF39090094A71E /* FloatingActionButtonView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -277,6 +277,25 @@
 			children = (
 			);
 			path = Properties;
+			sourceTree = "<group>";
+		};
+		7D8DED4A2ABF5CF40094A71E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED2E2ABF39090094A71E /* FloatingActionButtonView.swift */,
+				7D8DED3A2ABF398A0094A71E /* Navigation Bar */,
+				7D8DED4B2ABF5CFB0094A71E /* Events */,
+				7D8DED0E2ABEE00C0094A71E /* Home */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7D8DED4B2ABF5CFB0094A71E /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED4C2ABF5D090094A71E /* EventsView.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +394,7 @@
 				7D64AA3A2ABE7D1000EBE52E /* RizzAppApp.swift in Sources */,
 				7D64AA4C2ABE903300EBE52E /* SplashScreenView.swift in Sources */,
 				7D8DED1B2ABF38110094A71E /* MainHomeScrollView.swift in Sources */,
+				7D8DED4D2ABF5D090094A71E /* EventsView.swift in Sources */,
 				7D8DED1D2ABF382A0094A71E /* PlaylistGridView.swift in Sources */,
 				7D64AA4F2ABE924700EBE52E /* Constants.swift in Sources */,
 				7D8DED352ABF39500094A71E /* MainNavBarView.swift in Sources */,
