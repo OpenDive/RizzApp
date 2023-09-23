@@ -17,6 +17,27 @@
 		7D64AA562ABEB0C300EBE52E /* FeatureItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA552ABEB0C300EBE52E /* FeatureItemView.swift */; };
 		7D8DED0B2ABECC340094A71E /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED0A2ABECC340094A71E /* AuthViewModel.swift */; };
 		7D8DED0D2ABED0520094A71E /* ConnectWalletFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED0C2ABED0520094A71E /* ConnectWalletFeatureView.swift */; };
+		7D8DED102ABEE0370094A71E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED0F2ABEE0370094A71E /* HomeView.swift */; };
+		7D8DED132ABF1D960094A71E /* SwiftUIMasonry in Frameworks */ = {isa = PBXBuildFile; productRef = 7D8DED122ABF1D960094A71E /* SwiftUIMasonry */; };
+		7D8DED152ABF37C30094A71E /* HomeGridViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED142ABF37C30094A71E /* HomeGridViewMode.swift */; };
+		7D8DED172ABF37DE0094A71E /* MyNFTsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED162ABF37DE0094A71E /* MyNFTsView.swift */; };
+		7D8DED192ABF37F30094A71E /* TopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED182ABF37F30094A71E /* TopListView.swift */; };
+		7D8DED1B2ABF38110094A71E /* MainHomeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED1A2ABF38110094A71E /* MainHomeScrollView.swift */; };
+		7D8DED1D2ABF382A0094A71E /* PlaylistGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED1C2ABF382A0094A71E /* PlaylistGridView.swift */; };
+		7D8DED1F2ABF38400094A71E /* PlaylistCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED1E2ABF38400094A71E /* PlaylistCategoryView.swift */; };
+		7D8DED212ABF38540094A71E /* PlaylistScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED202ABF38540094A71E /* PlaylistScrollView.swift */; };
+		7D8DED232ABF386E0094A71E /* PlaylistCategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED222ABF386E0094A71E /* PlaylistCategoryHeaderView.swift */; };
+		7D8DED252ABF38870094A71E /* MasonryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED242ABF38870094A71E /* MasonryGridView.swift */; };
+		7D8DED272ABF38A50094A71E /* MasonryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED262ABF38A50094A71E /* MasonryCardView.swift */; };
+		7D8DED292ABF38B90094A71E /* BigCardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED282ABF38B90094A71E /* BigCardGridView.swift */; };
+		7D8DED2B2ABF38C90094A71E /* BigCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED2A2ABF38C90094A71E /* BigCardView.swift */; };
+		7D8DED2D2ABF38F40094A71E /* CollectorClusterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED2C2ABF38F40094A71E /* CollectorClusterGridView.swift */; };
+		7D8DED2F2ABF39090094A71E /* FloatingActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED2E2ABF39090094A71E /* FloatingActionButtonView.swift */; };
+		7D8DED312ABF39280094A71E /* HomeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED302ABF39280094A71E /* HomeNavBarView.swift */; };
+		7D8DED332ABF393D0094A71E /* NFTCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED322ABF393D0094A71E /* NFTCategoryView.swift */; };
+		7D8DED352ABF39500094A71E /* MainNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED342ABF39500094A71E /* MainNavBarView.swift */; };
+		7D8DED372ABF39670094A71E /* ProfileSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED362ABF39670094A71E /* ProfileSidebarView.swift */; };
+		7D8DED392ABF39780094A71E /* NetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED382ABF39780094A71E /* NetworkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +52,26 @@
 		7D64AA552ABEB0C300EBE52E /* FeatureItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureItemView.swift; sourceTree = "<group>"; };
 		7D8DED0A2ABECC340094A71E /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		7D8DED0C2ABED0520094A71E /* ConnectWalletFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectWalletFeatureView.swift; sourceTree = "<group>"; };
+		7D8DED0F2ABEE0370094A71E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7D8DED142ABF37C30094A71E /* HomeGridViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridViewMode.swift; sourceTree = "<group>"; };
+		7D8DED162ABF37DE0094A71E /* MyNFTsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNFTsView.swift; sourceTree = "<group>"; };
+		7D8DED182ABF37F30094A71E /* TopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListView.swift; sourceTree = "<group>"; };
+		7D8DED1A2ABF38110094A71E /* MainHomeScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeScrollView.swift; sourceTree = "<group>"; };
+		7D8DED1C2ABF382A0094A71E /* PlaylistGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistGridView.swift; sourceTree = "<group>"; };
+		7D8DED1E2ABF38400094A71E /* PlaylistCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCategoryView.swift; sourceTree = "<group>"; };
+		7D8DED202ABF38540094A71E /* PlaylistScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistScrollView.swift; sourceTree = "<group>"; };
+		7D8DED222ABF386E0094A71E /* PlaylistCategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCategoryHeaderView.swift; sourceTree = "<group>"; };
+		7D8DED242ABF38870094A71E /* MasonryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonryGridView.swift; sourceTree = "<group>"; };
+		7D8DED262ABF38A50094A71E /* MasonryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonryCardView.swift; sourceTree = "<group>"; };
+		7D8DED282ABF38B90094A71E /* BigCardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCardGridView.swift; sourceTree = "<group>"; };
+		7D8DED2A2ABF38C90094A71E /* BigCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCardView.swift; sourceTree = "<group>"; };
+		7D8DED2C2ABF38F40094A71E /* CollectorClusterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorClusterGridView.swift; sourceTree = "<group>"; };
+		7D8DED2E2ABF39090094A71E /* FloatingActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonView.swift; sourceTree = "<group>"; };
+		7D8DED302ABF39280094A71E /* HomeNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavBarView.swift; sourceTree = "<group>"; };
+		7D8DED322ABF393D0094A71E /* NFTCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCategoryView.swift; sourceTree = "<group>"; };
+		7D8DED342ABF39500094A71E /* MainNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavBarView.swift; sourceTree = "<group>"; };
+		7D8DED362ABF39670094A71E /* ProfileSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSidebarView.swift; sourceTree = "<group>"; };
+		7D8DED382ABF39780094A71E /* NetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8DED132ABF1D960094A71E /* SwiftUIMasonry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +150,7 @@
 		7D64AA4A2ABE902200EBE52E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				7D8DED0E2ABEE00C0094A71E /* Home */,
 				7D64AA522ABE98C900EBE52E /* Preview Features */,
 				7D64AA4B2ABE903300EBE52E /* SplashScreenView.swift */,
 			);
@@ -118,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				7D64AA4E2ABE924700EBE52E /* Constants.swift */,
+				7D8DED142ABF37C30094A71E /* HomeGridViewMode.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -131,6 +175,72 @@
 				7D8DED0C2ABED0520094A71E /* ConnectWalletFeatureView.swift */,
 			);
 			path = "Preview Features";
+			sourceTree = "<group>";
+		};
+		7D8DED0E2ABEE00C0094A71E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED3B2ABF39D00094A71E /* Main Scroll Menu */,
+				7D8DED3A2ABF398A0094A71E /* Navigation Bar */,
+				7D8DED0F2ABEE0370094A71E /* HomeView.swift */,
+				7D8DED2E2ABF39090094A71E /* FloatingActionButtonView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7D8DED3A2ABF398A0094A71E /* Navigation Bar */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED342ABF39500094A71E /* MainNavBarView.swift */,
+				7D8DED322ABF393D0094A71E /* NFTCategoryView.swift */,
+				7D8DED362ABF39670094A71E /* ProfileSidebarView.swift */,
+				7D8DED382ABF39780094A71E /* NetworkView.swift */,
+				7D8DED302ABF39280094A71E /* HomeNavBarView.swift */,
+			);
+			path = "Navigation Bar";
+			sourceTree = "<group>";
+		};
+		7D8DED3B2ABF39D00094A71E /* Main Scroll Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED3E2ABF3A2F0094A71E /* Playlist */,
+				7D8DED3D2ABF3A230094A71E /* Masonry */,
+				7D8DED3C2ABF3A0F0094A71E /* Big Card */,
+				7D8DED2C2ABF38F40094A71E /* CollectorClusterGridView.swift */,
+				7D8DED182ABF37F30094A71E /* TopListView.swift */,
+				7D8DED1A2ABF38110094A71E /* MainHomeScrollView.swift */,
+				7D8DED162ABF37DE0094A71E /* MyNFTsView.swift */,
+			);
+			path = "Main Scroll Menu";
+			sourceTree = "<group>";
+		};
+		7D8DED3C2ABF3A0F0094A71E /* Big Card */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED282ABF38B90094A71E /* BigCardGridView.swift */,
+				7D8DED2A2ABF38C90094A71E /* BigCardView.swift */,
+			);
+			path = "Big Card";
+			sourceTree = "<group>";
+		};
+		7D8DED3D2ABF3A230094A71E /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED242ABF38870094A71E /* MasonryGridView.swift */,
+				7D8DED262ABF38A50094A71E /* MasonryCardView.swift */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		7D8DED3E2ABF3A2F0094A71E /* Playlist */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED1C2ABF382A0094A71E /* PlaylistGridView.swift */,
+				7D8DED1E2ABF38400094A71E /* PlaylistCategoryView.swift */,
+				7D8DED202ABF38540094A71E /* PlaylistScrollView.swift */,
+				7D8DED222ABF386E0094A71E /* PlaylistCategoryHeaderView.swift */,
+			);
+			path = Playlist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +259,9 @@
 			dependencies = (
 			);
 			name = RizzApp;
+			packageProductDependencies = (
+				7D8DED122ABF1D960094A71E /* SwiftUIMasonry */,
+			);
 			productName = RizzApp;
 			productReference = 7D64AA362ABE7D1000EBE52E /* RizzApp.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +290,9 @@
 				Base,
 			);
 			mainGroup = 7D64AA2D2ABE7D1000EBE52E;
+			packageReferences = (
+				7D8DED112ABF1D960094A71E /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */,
+			);
 			productRefGroup = 7D64AA372ABE7D1000EBE52E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,14 +319,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8DED102ABEE0370094A71E /* HomeView.swift in Sources */,
+				7D8DED292ABF38B90094A71E /* BigCardGridView.swift in Sources */,
+				7D8DED1F2ABF38400094A71E /* PlaylistCategoryView.swift in Sources */,
 				7D64AA542ABE98DD00EBE52E /* FeatureItemCarouselView.swift in Sources */,
+				7D8DED232ABF386E0094A71E /* PlaylistCategoryHeaderView.swift in Sources */,
+				7D8DED272ABF38A50094A71E /* MasonryCardView.swift in Sources */,
 				7D64AA512ABE974E00EBE52E /* PreviewFeaturesView.swift in Sources */,
+				7D8DED2D2ABF38F40094A71E /* CollectorClusterGridView.swift in Sources */,
 				7D64AA562ABEB0C300EBE52E /* FeatureItemView.swift in Sources */,
+				7D8DED392ABF39780094A71E /* NetworkView.swift in Sources */,
+				7D8DED152ABF37C30094A71E /* HomeGridViewMode.swift in Sources */,
 				7D8DED0D2ABED0520094A71E /* ConnectWalletFeatureView.swift in Sources */,
+				7D8DED252ABF38870094A71E /* MasonryGridView.swift in Sources */,
 				7D8DED0B2ABECC340094A71E /* AuthViewModel.swift in Sources */,
+				7D8DED2F2ABF39090094A71E /* FloatingActionButtonView.swift in Sources */,
 				7D64AA3A2ABE7D1000EBE52E /* RizzAppApp.swift in Sources */,
 				7D64AA4C2ABE903300EBE52E /* SplashScreenView.swift in Sources */,
+				7D8DED1B2ABF38110094A71E /* MainHomeScrollView.swift in Sources */,
+				7D8DED1D2ABF382A0094A71E /* PlaylistGridView.swift in Sources */,
 				7D64AA4F2ABE924700EBE52E /* Constants.swift in Sources */,
+				7D8DED352ABF39500094A71E /* MainNavBarView.swift in Sources */,
+				7D8DED372ABF39670094A71E /* ProfileSidebarView.swift in Sources */,
+				7D8DED192ABF37F30094A71E /* TopListView.swift in Sources */,
+				7D8DED332ABF393D0094A71E /* NFTCategoryView.swift in Sources */,
+				7D8DED172ABF37DE0094A71E /* MyNFTsView.swift in Sources */,
+				7D8DED312ABF39280094A71E /* HomeNavBarView.swift in Sources */,
+				7D8DED212ABF38540094A71E /* PlaylistScrollView.swift in Sources */,
+				7D8DED2B2ABF38C90094A71E /* BigCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +554,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D8DED112ABF1D960094A71E /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ciaranrobrien/SwiftUIMasonry";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D8DED122ABF1D960094A71E /* SwiftUIMasonry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D8DED112ABF1D960094A71E /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */;
+			productName = SwiftUIMasonry;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D64AA2E2ABE7D1000EBE52E /* Project object */;
 }
