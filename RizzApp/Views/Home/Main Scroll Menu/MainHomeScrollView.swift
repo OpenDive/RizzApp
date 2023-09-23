@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainHomeScrollView: View {
-    @State private var gridMode: HomeGridViewMode = .playlist
+    @State private var gridMode: HomeGridViewMode = .collectorCluster
     
     var body: some View {
         switch gridMode {
