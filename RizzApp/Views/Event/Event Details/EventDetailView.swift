@@ -21,7 +21,7 @@ struct EventDetailView: View {
                 
                 Spacer()
             }
-            
+
             ScrollView {
                 VStack {
                     HStack {

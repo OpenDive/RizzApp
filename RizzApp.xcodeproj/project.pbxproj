@@ -44,6 +44,7 @@
 		7D8DED482ABF5AF50094A71E /* NFTTopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED472ABF5AF50094A71E /* NFTTopDetailView.swift */; };
 		7D8DED4D2ABF5D090094A71E /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED4C2ABF5D090094A71E /* EventsView.swift */; };
 		7D8DED502ABF6B720094A71E /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED4F2ABF6B720094A71E /* EventDetailView.swift */; };
+		7D8DED552ABF73660094A71E /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED542ABF73660094A71E /* CreateEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		7D8DED472ABF5AF50094A71E /* NFTTopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTTopDetailView.swift; sourceTree = "<group>"; };
 		7D8DED4C2ABF5D090094A71E /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		7D8DED4F2ABF6B720094A71E /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		7D8DED542ABF73660094A71E /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +141,9 @@
 		7D64AA472ABE900F00EBE52E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7D8DED4E2ABF6B5F0094A71E /* Event Details */,
+				7D8DED532ABF734A0094A71E /* NFT */,
+				7D8DED522ABF73360094A71E /* Event */,
 				7D8DED4A2ABF5CF40094A71E /* Main */,
-				7D8DED3F2ABF3F890094A71E /* NFT Detail */,
 				7D64AA4A2ABE902200EBE52E /* Onboarding */,
 			);
 			path = Views;
@@ -309,6 +311,31 @@
 			path = "Event Details";
 			sourceTree = "<group>";
 		};
+		7D8DED512ABF73280094A71E /* Create Event */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED542ABF73660094A71E /* CreateEventView.swift */,
+			);
+			path = "Create Event";
+			sourceTree = "<group>";
+		};
+		7D8DED522ABF73360094A71E /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED512ABF73280094A71E /* Create Event */,
+				7D8DED4E2ABF6B5F0094A71E /* Event Details */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		7D8DED532ABF734A0094A71E /* NFT */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED3F2ABF3F890094A71E /* NFT Detail */,
+			);
+			path = NFT;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,6 +439,7 @@
 				7D8DED352ABF39500094A71E /* MainNavBarView.swift in Sources */,
 				7D8DED412ABF3FA10094A71E /* NFTDetailView.swift in Sources */,
 				7D8DED372ABF39670094A71E /* ProfileSidebarView.swift in Sources */,
+				7D8DED552ABF73660094A71E /* CreateEventView.swift in Sources */,
 				7D8DED192ABF37F30094A71E /* TopListView.swift in Sources */,
 				7D8DED482ABF5AF50094A71E /* NFTTopDetailView.swift in Sources */,
 				7D8DED332ABF393D0094A71E /* NFTCategoryView.swift in Sources */,
