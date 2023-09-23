@@ -43,6 +43,7 @@
 		7D8DED462ABF4EAE0094A71E /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED452ABF4EAE0094A71E /* UIColor+extension.swift */; };
 		7D8DED482ABF5AF50094A71E /* NFTTopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED472ABF5AF50094A71E /* NFTTopDetailView.swift */; };
 		7D8DED4D2ABF5D090094A71E /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED4C2ABF5D090094A71E /* EventsView.swift */; };
+		7D8DED502ABF6B720094A71E /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED4F2ABF6B720094A71E /* EventDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		7D8DED452ABF4EAE0094A71E /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		7D8DED472ABF5AF50094A71E /* NFTTopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTTopDetailView.swift; sourceTree = "<group>"; };
 		7D8DED4C2ABF5D090094A71E /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		7D8DED4F2ABF6B720094A71E /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		7D64AA472ABE900F00EBE52E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D8DED4E2ABF6B5F0094A71E /* Event Details */,
 				7D8DED4A2ABF5CF40094A71E /* Main */,
 				7D8DED3F2ABF3F890094A71E /* NFT Detail */,
 				7D64AA4A2ABE902200EBE52E /* Onboarding */,
@@ -298,6 +301,14 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
+		7D8DED4E2ABF6B5F0094A71E /* Event Details */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DED4F2ABF6B720094A71E /* EventDetailView.swift */,
+			);
+			path = "Event Details";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,6 +407,7 @@
 				7D8DED1B2ABF38110094A71E /* MainHomeScrollView.swift in Sources */,
 				7D8DED4D2ABF5D090094A71E /* EventsView.swift in Sources */,
 				7D8DED1D2ABF382A0094A71E /* PlaylistGridView.swift in Sources */,
+				7D8DED502ABF6B720094A71E /* EventDetailView.swift in Sources */,
 				7D64AA4F2ABE924700EBE52E /* Constants.swift in Sources */,
 				7D8DED352ABF39500094A71E /* MainNavBarView.swift in Sources */,
 				7D8DED412ABF3FA10094A71E /* NFTDetailView.swift in Sources */,
