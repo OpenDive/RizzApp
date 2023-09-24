@@ -17,10 +17,12 @@ struct PlaylistScrollView: View {
                     Image(nft)
                         .resizable()
                         .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 12.0))
                         .frame(width: 110, height: 110)
                 }
             }
             .padding(.bottom)
+            .padding(.horizontal, 22)
         }
         .mask {
             RoundedRectangle(cornerRadius: 12.0)

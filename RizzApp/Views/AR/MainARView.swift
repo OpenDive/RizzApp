@@ -28,8 +28,6 @@
 //import ARKit
 //
 //struct MainARView: View {
-//    @EnvironmentObject var accountViewModel: AccountViewModel
-//
 //    @StateObject private var arViewModel: MainARViewModel = MainARViewModel()
 //
 //    @State private var isPlacementEnabled = false

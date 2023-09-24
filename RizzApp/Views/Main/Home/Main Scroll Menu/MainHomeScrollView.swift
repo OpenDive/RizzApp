@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MainHomeScrollView: View {
-    @State private var gridMode: HomeGridViewMode = .playlist
+    @EnvironmentObject var appearenceViewModel: AppearenceViewModel
     
     var body: some View {
-        switch gridMode {
+        switch appearenceViewModel.gridMode {
         case .collectorCluster:
             CollectorClusterGridView()
         case .bigCards:
@@ -26,4 +26,5 @@ struct MainHomeScrollView: View {
 
 #Preview {
     MainHomeScrollView()
+        .environmentObject(AppearenceViewModel.instance)
 }

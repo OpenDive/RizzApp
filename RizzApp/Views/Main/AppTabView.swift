@@ -29,4 +29,5 @@ struct AppTabView: View {
 
 #Preview {
     AppTabView()
+        .environmentObject(AppearenceViewModel.instance)
 }

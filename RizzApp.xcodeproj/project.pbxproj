@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D5FC8A72ABFBCC000BB2F2D /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5FC8A62ABFBCC000BB2F2D /* FocusEntity */; };
 		7D64AA3A2ABE7D1000EBE52E /* RizzAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */; };
 		7D64AA3E2ABE7D1200EBE52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */; };
 		7D64AA412ABE7D1200EBE52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA402ABE7D1200EBE52E /* Preview Assets.xcassets */; };
@@ -45,18 +46,15 @@
 		7D8DED4D2ABF5D090094A71E /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED4C2ABF5D090094A71E /* EventsView.swift */; };
 		7D8DED502ABF6B720094A71E /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED4F2ABF6B720094A71E /* EventDetailView.swift */; };
 		7D8DED552ABF73660094A71E /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED542ABF73660094A71E /* CreateEventView.swift */; };
-		7D8DED582ABF822A0094A71E /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED572ABF822A0094A71E /* ARView.swift */; };
 		7D8DED632ABF82B50094A71E /* ArtPiecePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED592ABF82B50094A71E /* ArtPiecePickerView.swift */; };
 		7D8DED642ABF82B50094A71E /* MainARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED5A2ABF82B50094A71E /* MainARView.swift */; };
 		7D8DED652ABF82B50094A71E /* SecondaryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED5B2ABF82B50094A71E /* SecondaryPickerView.swift */; };
-		7D8DED662ABF82B50094A71E /* UploadingSnaptshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED5C2ABF82B50094A71E /* UploadingSnaptshotView.swift */; };
 		7D8DED672ABF82B50094A71E /* ConfirmPlacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED5D2ABF82B50094A71E /* ConfirmPlacementView.swift */; };
 		7D8DED682ABF82B50094A71E /* FocusARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED5F2ABF82B50094A71E /* FocusARView.swift */; };
 		7D8DED692ABF82B50094A71E /* CustomDirectionLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED602ABF82B50094A71E /* CustomDirectionLight.swift */; };
 		7D8DED6A2ABF82B50094A71E /* ARView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED612ABF82B50094A71E /* ARView+Extension.swift */; };
 		7D8DED6B2ABF82B50094A71E /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED622ABF82B50094A71E /* ARViewContainer.swift */; };
 		7D8DED6E2ABF82F60094A71E /* ArtPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED6C2ABF82F60094A71E /* ArtPiece.swift */; };
-		7D8DED6F2ABF82F60094A71E /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED6D2ABF82F60094A71E /* Screenshot.swift */; };
 		7D8DED712ABF86650094A71E /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED702ABF86650094A71E /* AppTabView.swift */; };
 		7D8DED732ABF8CDB0094A71E /* AppearenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED722ABF8CDB0094A71E /* AppearenceViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -100,18 +98,15 @@
 		7D8DED4C2ABF5D090094A71E /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		7D8DED4F2ABF6B720094A71E /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		7D8DED542ABF73660094A71E /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
-		7D8DED572ABF822A0094A71E /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		7D8DED592ABF82B50094A71E /* ArtPiecePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtPiecePickerView.swift; sourceTree = "<group>"; };
 		7D8DED5A2ABF82B50094A71E /* MainARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainARView.swift; sourceTree = "<group>"; };
 		7D8DED5B2ABF82B50094A71E /* SecondaryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryPickerView.swift; sourceTree = "<group>"; };
-		7D8DED5C2ABF82B50094A71E /* UploadingSnaptshotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadingSnaptshotView.swift; sourceTree = "<group>"; };
 		7D8DED5D2ABF82B50094A71E /* ConfirmPlacementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPlacementView.swift; sourceTree = "<group>"; };
 		7D8DED5F2ABF82B50094A71E /* FocusARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusARView.swift; sourceTree = "<group>"; };
 		7D8DED602ABF82B50094A71E /* CustomDirectionLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDirectionLight.swift; sourceTree = "<group>"; };
 		7D8DED612ABF82B50094A71E /* ARView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARView+Extension.swift"; sourceTree = "<group>"; };
 		7D8DED622ABF82B50094A71E /* ARViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		7D8DED6C2ABF82F60094A71E /* ArtPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtPiece.swift; sourceTree = "<group>"; };
-		7D8DED6D2ABF82F60094A71E /* Screenshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
 		7D8DED702ABF86650094A71E /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		7D8DED722ABF8CDB0094A71E /* AppearenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5FC8A72ABFBCC000BB2F2D /* FocusEntity in Frameworks */,
 				7D8DED132ABF1D960094A71E /* SwiftUIMasonry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				7D8DED6C2ABF82F60094A71E /* ArtPiece.swift */,
-				7D8DED6D2ABF82F60094A71E /* Screenshot.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,8 +372,6 @@
 				7D8DED5D2ABF82B50094A71E /* ConfirmPlacementView.swift */,
 				7D8DED5A2ABF82B50094A71E /* MainARView.swift */,
 				7D8DED5B2ABF82B50094A71E /* SecondaryPickerView.swift */,
-				7D8DED5C2ABF82B50094A71E /* UploadingSnaptshotView.swift */,
-				7D8DED572ABF822A0094A71E /* ARView.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -412,6 +405,7 @@
 			name = RizzApp;
 			packageProductDependencies = (
 				7D8DED122ABF1D960094A71E /* SwiftUIMasonry */,
+				7D5FC8A62ABFBCC000BB2F2D /* FocusEntity */,
 			);
 			productName = RizzApp;
 			productReference = 7D64AA362ABE7D1000EBE52E /* RizzApp.app */;
@@ -443,6 +437,7 @@
 			mainGroup = 7D64AA2D2ABE7D1000EBE52E;
 			packageReferences = (
 				7D8DED112ABF1D960094A71E /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */,
+				7D5FC8A52ABFBCC000BB2F2D /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
 			productRefGroup = 7D64AA372ABE7D1000EBE52E /* Products */;
 			projectDirPath = "";
@@ -483,13 +478,11 @@
 				7D8DED712ABF86650094A71E /* AppTabView.swift in Sources */,
 				7D8DED2D2ABF38F40094A71E /* CollectorClusterGridView.swift in Sources */,
 				7D64AA562ABEB0C300EBE52E /* FeatureItemView.swift in Sources */,
-				7D8DED662ABF82B50094A71E /* UploadingSnaptshotView.swift in Sources */,
 				7D8DED632ABF82B50094A71E /* ArtPiecePickerView.swift in Sources */,
 				7D8DED392ABF39780094A71E /* NetworkView.swift in Sources */,
 				7D8DED6B2ABF82B50094A71E /* ARViewContainer.swift in Sources */,
 				7D8DED152ABF37C30094A71E /* HomeGridViewMode.swift in Sources */,
 				7D8DED462ABF4EAE0094A71E /* UIColor+extension.swift in Sources */,
-				7D8DED6F2ABF82F60094A71E /* Screenshot.swift in Sources */,
 				7D8DED652ABF82B50094A71E /* SecondaryPickerView.swift in Sources */,
 				7D8DED0D2ABED0520094A71E /* ConnectWalletFeatureView.swift in Sources */,
 				7D8DED642ABF82B50094A71E /* MainARView.swift in Sources */,
@@ -511,7 +504,6 @@
 				7D8DED372ABF39670094A71E /* ProfileSidebarView.swift in Sources */,
 				7D8DED552ABF73660094A71E /* CreateEventView.swift in Sources */,
 				7D8DED192ABF37F30094A71E /* TopListView.swift in Sources */,
-				7D8DED582ABF822A0094A71E /* ARView.swift in Sources */,
 				7D8DED482ABF5AF50094A71E /* NFTTopDetailView.swift in Sources */,
 				7D8DED332ABF393D0094A71E /* NFTCategoryView.swift in Sources */,
 				7D8DED172ABF37DE0094A71E /* MyNFTsView.swift in Sources */,
@@ -728,6 +720,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7D5FC8A52ABFBCC000BB2F2D /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
 		7D8DED112ABF1D960094A71E /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ciaranrobrien/SwiftUIMasonry";
@@ -739,6 +739,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7D5FC8A62ABFBCC000BB2F2D /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D5FC8A52ABFBCC000BB2F2D /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
 		7D8DED122ABF1D960094A71E /* SwiftUIMasonry */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7D8DED112ABF1D960094A71E /* XCRemoteSwiftPackageReference "SwiftUIMasonry" */;

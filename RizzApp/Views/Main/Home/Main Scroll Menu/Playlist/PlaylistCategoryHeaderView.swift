@@ -19,6 +19,7 @@ struct PlaylistCategoryHeaderView: View {
                     Image(icon)
                         .resizable()
                         .scaledToFit()
+                        .clipShape(Circle())
                         .frame(width: 50, height: 50)
                     
                     Image("EthLogo")
