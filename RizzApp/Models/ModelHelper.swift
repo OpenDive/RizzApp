@@ -48,9 +48,15 @@ struct ModelHelper {
 
         do {
             // Implement Texture Material onto Contents
-            let filePath = Bundle.main.path(forResource: "BAYC1", ofType: "png")!
-            let imageResource = URL(fileURLWithPath: filePath)
-            let texture = try TextureResource.load(contentsOf: imageResource)
+            let ctx = CIContext(options: nil)
+            guard
+                let uiImage = UIImage(named: image),
+                let ciImage = CIImage(image: uiImage),
+                let imageResources = ctx.createCGImage(ciImage, from: ciImage.extent)
+            else {
+                return nil
+            }
+            let texture = try TextureResource.generate(from: imageResources, options: .init(semantic: nil))
             var material = SimpleMaterial()
             material.color.texture = SimpleMaterial.Texture(texture)
             screenEntity.model?.materials = [material]

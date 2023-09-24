@@ -27,9 +27,11 @@ struct RizzAppApp: App {
                     }
             } else {
                 if self.authViewModel.hasConnectedWallet {
-                    AppTabView()
-                        .environmentObject(self.authViewModel)
-                        .environmentObject(self.appearenceViewModel)
+                    NavigationStack {
+                        AppTabView()
+                            .environmentObject(self.authViewModel)
+                            .environmentObject(self.appearenceViewModel)
+                    }
                 } else {
                     PreviewFeaturesView()
                         .environmentObject(self.authViewModel)

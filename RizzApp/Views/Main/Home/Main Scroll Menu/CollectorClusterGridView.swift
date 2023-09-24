@@ -16,8 +16,10 @@ struct CollectorClusterGridView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVGrid(columns: items, spacing: 2) {
-                ForEach(0..<33, id:\.self) { _ in
-                    Rectangle()
+                ForEach(RizzOnboarding.nftCollection, id:\.self) { nft in
+                    Image(nft)
+                        .resizable()
+                        .scaledToFit()
                         .frame(width: side, height: side)
                 }
             }

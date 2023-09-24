@@ -12,8 +12,8 @@ struct MasonryGridView: View {
     var body: some View {
         ScrollView(.vertical) {
             VMasonry(columns: 2) {
-                ForEach(0..<34, id:\.self) { _ in
-                    MasonryCardView()
+                ForEach(RizzOnboarding.nftCollection, id:\.self) { nft in
+                    MasonryCardView(image: nft)
                 }
             }
             .padding(.bottom, 140)

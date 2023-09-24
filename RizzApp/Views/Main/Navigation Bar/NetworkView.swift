@@ -12,6 +12,7 @@ struct NetworkView: View {
         ZStack {
             Capsule()
                 .frame(width: 155, height: 50)
+                .foregroundStyle(RizzColors.rizzBlack)
             
             HStack {
                 Image(systemName: "circle.fill")

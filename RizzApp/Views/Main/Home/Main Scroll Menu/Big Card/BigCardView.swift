@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct BigCardView: View {
+    let image: String
+    
     var body: some View {
-        Rectangle()
+        Image(image)
+            .resizable()
+            .scaledToFit()
             .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.width - 50)
     }
 }
 
 #Preview {
-    BigCardView()
+    BigCardView(image: "CoolCat1")
 }

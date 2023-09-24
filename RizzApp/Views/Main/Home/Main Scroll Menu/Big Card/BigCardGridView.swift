@@ -10,8 +10,8 @@ import SwiftUI
 struct BigCardGridView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
-            ForEach(0..<33, id:\.self) { _ in
-                BigCardView()
+            ForEach(RizzOnboarding.nftCollection, id:\.self) { nft in
+                BigCardView(image: nft)
             }
             .padding(.bottom, 140)
         }

@@ -53,6 +53,14 @@ struct RizzOnboarding {
         Collection(title: "Rare Pizza Boxes", logo: "PizzaBoxLogo", NFTs: ["PizzaBox1", "PizzaBox2", "PizzaBox3", "PizzaBox4", "PizzaBox5"]),
         Collection(title: "Real Punks", logo: "RealPunkLogo", NFTs: ["RealPunk1", "RealPunk2", "RealPunk3"])
     ]
+    
+    static let nftCollection: [String] = [
+        "BAYC1",
+        "CoolCat1", "CoolCat2",
+        "Robotos1",
+        "PizzaBox1", "PizzaBox2", "PizzaBox3", "PizzaBox4", "PizzaBox5",
+        "RealPunk1", "RealPunk2", "RealPunk3"
+    ]
 }
 
 struct Collection: Identifiable {

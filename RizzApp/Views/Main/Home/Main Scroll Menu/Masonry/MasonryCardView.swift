@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct MasonryCardView: View {
+    let image: String
+    
     var body: some View {
-        Rectangle()
-            .frame(width: 185, height: 350)
+        Image(image)
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: 185, maxHeight: 350)
     }
 }
 
 #Preview {
-    MasonryCardView()
+    MasonryCardView(image: "CoolCat1")
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D5FC8A72ABFBCC000BB2F2D /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5FC8A62ABFBCC000BB2F2D /* FocusEntity */; };
 		7D5FC8A92ABFC51600BB2F2D /* MainARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FC8A82ABFC51600BB2F2D /* MainARViewModel.swift */; };
+		7D5FC8AD2AC0034500BB2F2D /* GridModeOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FC8AC2AC0034500BB2F2D /* GridModeOptionsView.swift */; };
 		7D64AA3A2ABE7D1000EBE52E /* RizzAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */; };
 		7D64AA3E2ABE7D1200EBE52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */; };
 		7D64AA412ABE7D1200EBE52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA402ABE7D1200EBE52E /* Preview Assets.xcassets */; };
@@ -55,13 +56,14 @@
 		7D8DED692ABF82B50094A71E /* CustomDirectionLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED602ABF82B50094A71E /* CustomDirectionLight.swift */; };
 		7D8DED6A2ABF82B50094A71E /* ARView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED612ABF82B50094A71E /* ARView+Extension.swift */; };
 		7D8DED6B2ABF82B50094A71E /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED622ABF82B50094A71E /* ARViewContainer.swift */; };
-		7D8DED6E2ABF82F60094A71E /* ArtPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED6C2ABF82F60094A71E /* ArtPiece.swift */; };
+		7D8DED6E2ABF82F60094A71E /* ModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED6C2ABF82F60094A71E /* ModelHelper.swift */; };
 		7D8DED712ABF86650094A71E /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED702ABF86650094A71E /* AppTabView.swift */; };
 		7D8DED732ABF8CDB0094A71E /* AppearenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED722ABF8CDB0094A71E /* AppearenceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D5FC8A82ABFC51600BB2F2D /* MainARViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainARViewModel.swift; sourceTree = "<group>"; };
+		7D5FC8AC2AC0034500BB2F2D /* GridModeOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModeOptionsView.swift; sourceTree = "<group>"; };
 		7D64AA362ABE7D1000EBE52E /* RizzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RizzAppApp.swift; sourceTree = "<group>"; };
 		7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,7 +110,7 @@
 		7D8DED602ABF82B50094A71E /* CustomDirectionLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDirectionLight.swift; sourceTree = "<group>"; };
 		7D8DED612ABF82B50094A71E /* ARView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARView+Extension.swift"; sourceTree = "<group>"; };
 		7D8DED622ABF82B50094A71E /* ARViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
-		7D8DED6C2ABF82F60094A71E /* ArtPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtPiece.swift; sourceTree = "<group>"; };
+		7D8DED6C2ABF82F60094A71E /* ModelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelHelper.swift; sourceTree = "<group>"; };
 		7D8DED702ABF86650094A71E /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		7D8DED722ABF8CDB0094A71E /* AppearenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,7 +191,7 @@
 		7D64AA492ABE901C00EBE52E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7D8DED6C2ABF82F60094A71E /* ArtPiece.swift */,
+				7D8DED6C2ABF82F60094A71E /* ModelHelper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +257,7 @@
 				7D8DED182ABF37F30094A71E /* TopListView.swift */,
 				7D8DED1A2ABF38110094A71E /* MainHomeScrollView.swift */,
 				7D8DED162ABF37DE0094A71E /* MyNFTsView.swift */,
+				7D5FC8AC2AC0034500BB2F2D /* GridModeOptionsView.swift */,
 			);
 			path = "Main Scroll Menu";
 			sourceTree = "<group>";
@@ -472,7 +475,7 @@
 				7D8DED292ABF38B90094A71E /* BigCardGridView.swift in Sources */,
 				7D8DED1F2ABF38400094A71E /* PlaylistCategoryView.swift in Sources */,
 				7D64AA542ABE98DD00EBE52E /* FeatureItemCarouselView.swift in Sources */,
-				7D8DED6E2ABF82F60094A71E /* ArtPiece.swift in Sources */,
+				7D8DED6E2ABF82F60094A71E /* ModelHelper.swift in Sources */,
 				7D8DED682ABF82B50094A71E /* FocusARView.swift in Sources */,
 				7D8DED232ABF386E0094A71E /* PlaylistCategoryHeaderView.swift in Sources */,
 				7D8DED272ABF38A50094A71E /* MasonryCardView.swift in Sources */,
@@ -490,6 +493,7 @@
 				7D8DED652ABF82B50094A71E /* SecondaryPickerView.swift in Sources */,
 				7D8DED0D2ABED0520094A71E /* ConnectWalletFeatureView.swift in Sources */,
 				7D8DED642ABF82B50094A71E /* MainARView.swift in Sources */,
+				7D5FC8AD2AC0034500BB2F2D /* GridModeOptionsView.swift in Sources */,
 				7D8DED252ABF38870094A71E /* MasonryGridView.swift in Sources */,
 				7D8DED0B2ABECC340094A71E /* AuthViewModel.swift in Sources */,
 				7D8DED2F2ABF39090094A71E /* MenuDockView.swift in Sources */,
@@ -652,6 +656,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed for AR experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -682,6 +687,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed for AR experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

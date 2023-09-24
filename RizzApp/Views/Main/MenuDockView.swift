@@ -19,7 +19,7 @@ struct MenuDockView: View {
     @State private var isShowingActionMenu: Bool = false
     
     var body: some View {
-        ZStack {            
+        ZStack {
             if isShowingActionMenu {
                 Rectangle()
                     .foregroundStyle(RizzColors.rizzMatteBlack.opacity(0.18))
@@ -98,24 +98,58 @@ struct ActionButtonView: View {
     @State private var hasCreateEventButton: Bool = false
     @State private var hasMintNFTButton: Bool = false
     
+    @State private var mintNFTPressed: Bool = false
+    @State private var createEventPressed: Bool = false
+    @State private var displayARPressed: Bool = false
+    
     var body: some View {
         ZStack {
             if hasMintNFTButton {
-                SubActionButtonView(icon: "pickaxe", title: "Mint NFT", iconType: .asset)
+                Button {
+                    mintNFTPressed.toggle()
+                } label: {
+                    SubActionButtonView(icon: "pickaxe", iconType: .asset)
+                }
                     .offset(x: 0, y: -270)
                     .padding(.trailing)
+                
+                NavigationLink(
+                    isActive: $mintNFTPressed,
+                    destination: { HelloView() }, 
+                    label: { }
+                )
             }
             
             if hasCreateEventButton {
-                SubActionButtonView(icon: "ticket.fill", title: "Create Event", iconType: .sfSymbol)
+                Button {
+                    createEventPressed.toggle()
+                } label: {
+                    SubActionButtonView(icon: "ticket.fill", iconType: .sfSymbol)
+                }
                     .offset(x: 0, y: -185)
                     .padding(.trailing)
+                
+                NavigationLink(
+                    isActive: $createEventPressed,
+                    destination: { CreateEventView() },
+                    label: { }
+                )
             }
             
             if hasDisplayedARButton {
-                SubActionButtonView(icon: "arkit", title: "AR Mode", iconType: .sfSymbol)
+                Button {
+                    displayARPressed.toggle()
+                } label: {
+                    SubActionButtonView(icon: "arkit", iconType: .sfSymbol)
+                }
                     .offset(x: 0, y: -100)
                     .padding(.trailing)
+                
+                NavigationLink(
+                    isActive: $displayARPressed,
+                    destination: { MainARView() },
+                    label: { }
+                )
             }
             
             Button {
@@ -173,21 +207,10 @@ struct ActionButtonView: View {
 
 struct SubActionButtonView: View {
     let icon: String
-    let title: String
     let iconType: IconType
     
     var body: some View {
         HStack {
-            Text(title)
-                .bold()
-                .frame(maxWidth: 74)
-                .padding(24)
-                .foregroundStyle(RizzColors.rizzWhite)
-                .background {
-                    RoundedRectangle(cornerRadius: 16.0)
-                        .foregroundStyle(RizzColors.rizzLightGray)
-                }
-            
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [RizzColors.rizzPurple, RizzColors.rizzGreen]), startPoint: .leading, endPoint: .trailing)
                     .clipShape(Circle())
@@ -214,4 +237,10 @@ struct SubActionButtonView: View {
 
 #Preview {
     FloatingActionPreview()
+}
+
+struct HelloView: View {
+    var body: some View {
+        Text("Hi")
+    }
 }
