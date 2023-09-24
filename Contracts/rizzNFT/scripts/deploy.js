@@ -19,7 +19,7 @@ async function main() {
 
   await r.deployed();
 
-  console.log("Greeter deployed to:", r.address);
+  console.log("Rizz NFT deployed to:", r.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

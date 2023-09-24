@@ -1,18 +1,3 @@
-/*
-
- ██████  ██████   ██████  ██   ██ ██████   ██████   ██████  ██   ██    ██████  ███████ ██    ██
-██      ██    ██ ██    ██ ██  ██  ██   ██ ██    ██ ██    ██ ██  ██     ██   ██ ██      ██    ██
-██      ██    ██ ██    ██ █████   ██████  ██    ██ ██    ██ █████      ██   ██ █████   ██    ██
-██      ██    ██ ██    ██ ██  ██  ██   ██ ██    ██ ██    ██ ██  ██     ██   ██ ██       ██  ██
- ██████  ██████   ██████  ██   ██ ██████   ██████   ██████  ██   ██ ██ ██████  ███████   ████
-
-Find any smart contract, and build your project faster: https://www.cookbook.dev
-Twitter: https://twitter.com/cookbook_dev
-Discord: https://discord.gg/WzsfPcfHrk
-
-Find this contract on Cookbook: https://www.cookbook.dev/contracts/multi-collection-nft-with-pausable-transfers?utm=code
-*/
-
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)
 
