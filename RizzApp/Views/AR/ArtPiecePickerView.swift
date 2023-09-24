@@ -46,12 +46,12 @@ struct ArtPiecePickerView: View {
                     HStack {
                         ForEach(authViewModel.nfts) { nft in
                             Button {
-                                ModelHelper.modelEntity(imageUrl: nft.image) { entity in
+                                ModelHelper.modelEntity(imageUrl: nft.imageURL) { entity in
                                     self.arViewModel.selectedPiece = entity
                                 }
                                 self.arViewModel.isShowingAdder = true
                             } label: {
-                                ArtPiecePickerItemView(nft: nft.image)
+                                ArtPiecePickerItemView(nft: nft.imageURL)
                             }
                         }
                     }
@@ -81,6 +81,7 @@ struct ArtPiecePickerItemView: View {
                 .padding(.horizontal, 10)
         } else {
             RoundedRectangle(cornerRadius: 12.0)
+                .foregroundStyle(RizzColors.rizzGray)
                 .scaledToFit()
                 .clipShape(RoundedRectangle(cornerRadius: 12.0))
                 .frame(width: 60, height: 60)

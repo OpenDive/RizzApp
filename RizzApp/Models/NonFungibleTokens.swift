@@ -17,4 +17,13 @@ struct NonFungibleTokens: Identifiable {
     let asset: Data?
     let tokenId: Int
     let id = UUID().uuidString
+    
+    var imageURL: String {
+        var inputURL = self.image
+        if inputURL.contains("ipfs://") {
+            let urlGuard = URL(string: inputURL)!
+            inputURL = urlGuard.host() != nil ? "http://ipfs.io/ipfs/\(urlGuard.host()!)" : inputURL
+        }
+        return inputURL
+    }
 }

@@ -11,7 +11,7 @@ struct MasonryCardView: View {
     let nft: NonFungibleTokens
     
     var body: some View {
-        if let url = URL(string: nft.image) {
+        if let url = URL(string: nft.imageURL) {
             AsyncImage(url: url) { image in
                 image.image?.resizable().scaledToFit()
             }

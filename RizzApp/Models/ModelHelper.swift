@@ -66,6 +66,12 @@ struct ModelHelper {
     }
     
     private static func fetchImageWithEscaping(imageURL: String, completionHandler: @escaping (_ url: URL?) -> Void) {
+        var inputURL = imageURL
+        if inputURL.contains("ipfs://") {
+            let urlGuard = URL(string: inputURL)!
+            inputURL = urlGuard.host() != nil ? "http://ipfs.io/ipfs/\(urlGuard.host()!)" : inputURL
+        }
+        
         URLSession.shared.dataTask(with: URL(string: imageURL)!) { data, response, error in
             guard let data else {
                 completionHandler(nil)
