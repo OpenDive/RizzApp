@@ -17,6 +17,9 @@ struct RizzColors {
     static let rizzLightGray = Color("RizzLightGray")
     static let rizzMatteBlack = Color("RizzMatteBlack")
     static let rizzNeonBlue = Color("RizzNeonBlue")
+    static let rizzRed = Color("RizzRed")
+    static let rizzGreen = Color("RizzGreen")
+    static let rizzPurple = Color("RizzPurple")
 }
 
 struct RizzOnboarding {

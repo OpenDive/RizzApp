@@ -22,7 +22,7 @@ struct AppTabView: View {
                 EventsView()
             }
             
-            FloatingActionButtonView(index: $index)
+            MenuDockView(index: $index)
         }
     }
 }

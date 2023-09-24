@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D5FC8A72ABFBCC000BB2F2D /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5FC8A62ABFBCC000BB2F2D /* FocusEntity */; };
+		7D5FC8A92ABFC51600BB2F2D /* MainARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FC8A82ABFC51600BB2F2D /* MainARViewModel.swift */; };
 		7D64AA3A2ABE7D1000EBE52E /* RizzAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */; };
 		7D64AA3E2ABE7D1200EBE52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */; };
 		7D64AA412ABE7D1200EBE52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA402ABE7D1200EBE52E /* Preview Assets.xcassets */; };
@@ -33,7 +34,7 @@
 		7D8DED292ABF38B90094A71E /* BigCardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED282ABF38B90094A71E /* BigCardGridView.swift */; };
 		7D8DED2B2ABF38C90094A71E /* BigCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED2A2ABF38C90094A71E /* BigCardView.swift */; };
 		7D8DED2D2ABF38F40094A71E /* CollectorClusterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED2C2ABF38F40094A71E /* CollectorClusterGridView.swift */; };
-		7D8DED2F2ABF39090094A71E /* FloatingActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED2E2ABF39090094A71E /* FloatingActionButtonView.swift */; };
+		7D8DED2F2ABF39090094A71E /* MenuDockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED2E2ABF39090094A71E /* MenuDockView.swift */; };
 		7D8DED312ABF39280094A71E /* HomeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED302ABF39280094A71E /* HomeNavBarView.swift */; };
 		7D8DED332ABF393D0094A71E /* NFTCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED322ABF393D0094A71E /* NFTCategoryView.swift */; };
 		7D8DED352ABF39500094A71E /* MainNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DED342ABF39500094A71E /* MainNavBarView.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D5FC8A82ABFC51600BB2F2D /* MainARViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainARViewModel.swift; sourceTree = "<group>"; };
 		7D64AA362ABE7D1000EBE52E /* RizzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RizzAppApp.swift; sourceTree = "<group>"; };
 		7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,7 +87,7 @@
 		7D8DED282ABF38B90094A71E /* BigCardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCardGridView.swift; sourceTree = "<group>"; };
 		7D8DED2A2ABF38C90094A71E /* BigCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCardView.swift; sourceTree = "<group>"; };
 		7D8DED2C2ABF38F40094A71E /* CollectorClusterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorClusterGridView.swift; sourceTree = "<group>"; };
-		7D8DED2E2ABF39090094A71E /* FloatingActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonView.swift; sourceTree = "<group>"; };
+		7D8DED2E2ABF39090094A71E /* MenuDockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDockView.swift; sourceTree = "<group>"; };
 		7D8DED302ABF39280094A71E /* HomeNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavBarView.swift; sourceTree = "<group>"; };
 		7D8DED322ABF393D0094A71E /* NFTCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCategoryView.swift; sourceTree = "<group>"; };
 		7D8DED342ABF39500094A71E /* MainNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavBarView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		7D64AA482ABE901500EBE52E /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D5FC8A82ABFC51600BB2F2D /* MainARViewModel.swift */,
 				7D8DED0A2ABECC340094A71E /* AuthViewModel.swift */,
 				7D8DED722ABF8CDB0094A71E /* AppearenceViewModel.swift */,
 			);
@@ -314,7 +317,7 @@
 		7D8DED4A2ABF5CF40094A71E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				7D8DED2E2ABF39090094A71E /* FloatingActionButtonView.swift */,
+				7D8DED2E2ABF39090094A71E /* MenuDockView.swift */,
 				7D8DED3A2ABF398A0094A71E /* Navigation Bar */,
 				7D8DED4B2ABF5CFB0094A71E /* Events */,
 				7D8DED0E2ABEE00C0094A71E /* Home */,
@@ -476,6 +479,7 @@
 				7D8DED6A2ABF82B50094A71E /* ARView+Extension.swift in Sources */,
 				7D64AA512ABE974E00EBE52E /* PreviewFeaturesView.swift in Sources */,
 				7D8DED712ABF86650094A71E /* AppTabView.swift in Sources */,
+				7D5FC8A92ABFC51600BB2F2D /* MainARViewModel.swift in Sources */,
 				7D8DED2D2ABF38F40094A71E /* CollectorClusterGridView.swift in Sources */,
 				7D64AA562ABEB0C300EBE52E /* FeatureItemView.swift in Sources */,
 				7D8DED632ABF82B50094A71E /* ArtPiecePickerView.swift in Sources */,
@@ -488,7 +492,7 @@
 				7D8DED642ABF82B50094A71E /* MainARView.swift in Sources */,
 				7D8DED252ABF38870094A71E /* MasonryGridView.swift in Sources */,
 				7D8DED0B2ABECC340094A71E /* AuthViewModel.swift in Sources */,
-				7D8DED2F2ABF39090094A71E /* FloatingActionButtonView.swift in Sources */,
+				7D8DED2F2ABF39090094A71E /* MenuDockView.swift in Sources */,
 				7D8DED442ABF464B0094A71E /* UIImage+extension.swift in Sources */,
 				7D8DED732ABF8CDB0094A71E /* AppearenceViewModel.swift in Sources */,
 				7D8DED672ABF82B50094A71E /* ConfirmPlacementView.swift in Sources */,

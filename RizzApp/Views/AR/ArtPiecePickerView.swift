@@ -26,7 +26,6 @@
 //import SwiftUI
 //
 //struct ArtPiecePickerView: View {
-//    @EnvironmentObject var accountViewModel: AccountViewModel
 //    @EnvironmentObject var arViewModel: MainARViewModel
 //
 //    var body: some View {
@@ -64,7 +63,6 @@
 //
 //#Preview {
 //    ArtPiecePickerView()
-//        .environmentObject(AccountViewModel.shared)
 //}
 //
 //struct ArtPiecePickerItemView: View {

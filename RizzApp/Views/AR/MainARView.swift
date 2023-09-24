@@ -40,10 +40,6 @@
 //                .environmentObject(self.arViewModel)
 //                .ignoresSafeArea()
 //
-//            if self.arViewModel.isShowingUploadSnapshotOverlay {
-//                UploadingSnaptshotView()
-//            }
-//
 //            if self.arViewModel.isShowingAdder {
 //                VStack {
 //                    Spacer()
@@ -56,27 +52,6 @@
 //                VStack {
 //                    ArtPiecePickerView()
 //                        .environmentObject(self.arViewModel)
-//
-//                    SecondaryPickerView() {
-//                        if let arView = ARViewContainer.arView {
-//                            arView.snapshot(saveToHDR: true) { image in
-//                                if let image {
-//                                    self.arViewModel.isShowingUploadSnapshotOverlay = true
-//                                    Task {
-//                                        do {
-//                                            try await self.accountViewModel.uploadScreenshot(image: image)
-//                                            self.errorMessage = "Successfully minted screenshot."
-//                                            self.isShowingPopup = true
-//                                        } catch {
-//                                            self.errorMessage = "Something went wrong: \(error)"
-//                                            self.isShowingPopup = true
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-//                    .padding(.top)
 //                }
 //            }
 //        }
@@ -92,5 +67,4 @@
 //
 //#Preview {
 //    MainARView()
-//        .environmentObject(AccountViewModel.shared)
 //}

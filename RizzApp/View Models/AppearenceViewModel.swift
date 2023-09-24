@@ -14,4 +14,5 @@ class AppearenceViewModel: ObservableObject {
     private init() {  }
     
     @Published var gridMode: HomeGridViewMode = .playlist
+    @Published var isShowingActionMenu: Bool = false
 }
