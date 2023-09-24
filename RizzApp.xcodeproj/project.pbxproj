@@ -27,6 +27,7 @@
 		7D5FC8D52AC03FA800BB2F2D /* RestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FC8D42AC03FA800BB2F2D /* RestHandler.swift */; };
 		7D5FC8D82AC0474200BB2F2D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5FC8D72AC0474200BB2F2D /* SwiftyJSON */; };
 		7D5FC8DB2AC0670B00BB2F2D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5FC8DA2AC0670B00BB2F2D /* Kingfisher */; };
+		7D5FC8DD2AC0807D00BB2F2D /* SVGWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FC8DC2AC0807D00BB2F2D /* SVGWebView.swift */; };
 		7D64AA3A2ABE7D1000EBE52E /* RizzAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */; };
 		7D64AA3E2ABE7D1200EBE52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */; };
 		7D64AA412ABE7D1200EBE52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D64AA402ABE7D1200EBE52E /* Preview Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		7D5FC8AC2AC0034500BB2F2D /* GridModeOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModeOptionsView.swift; sourceTree = "<group>"; };
 		7D5FC8D22AC0373B00BB2F2D /* NonFungibleTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonFungibleTokens.swift; sourceTree = "<group>"; };
 		7D5FC8D42AC03FA800BB2F2D /* RestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestHandler.swift; sourceTree = "<group>"; };
+		7D5FC8DC2AC0807D00BB2F2D /* SVGWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGWebView.swift; sourceTree = "<group>"; };
 		7D64AA362ABE7D1000EBE52E /* RizzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RizzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D64AA392ABE7D1000EBE52E /* RizzAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RizzAppApp.swift; sourceTree = "<group>"; };
 		7D64AA3D2ABE7D1200EBE52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				7D64AA4E2ABE924700EBE52E /* Constants.swift */,
 				7D8DED142ABF37C30094A71E /* HomeGridViewMode.swift */,
 				7D5FC8D42AC03FA800BB2F2D /* RestHandler.swift */,
+				7D5FC8DC2AC0807D00BB2F2D /* SVGWebView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				7D8DED1D2ABF382A0094A71E /* PlaylistGridView.swift in Sources */,
 				7D8DED502ABF6B720094A71E /* EventDetailView.swift in Sources */,
 				7D64AA4F2ABE924700EBE52E /* Constants.swift in Sources */,
+				7D5FC8DD2AC0807D00BB2F2D /* SVGWebView.swift in Sources */,
 				7D8DED352ABF39500094A71E /* MainNavBarView.swift in Sources */,
 				7D8DED412ABF3FA10094A71E /* NFTDetailView.swift in Sources */,
 				7D8DED372ABF39670094A71E /* ProfileSidebarView.swift in Sources */,

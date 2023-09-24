@@ -19,7 +19,11 @@ struct CollectorClusterGridView: View {
         ScrollView(showsIndicators: false) {
             LazyVGrid(columns: items, spacing: 2) {
                 ForEach(authViewModel.nfts) { nft in
-                    if let url = URL(string: nft.imageURL) {
+                    if nft.imageURL.contains("<svg") {
+                        SVGWebView(svgString: nft.imageURL)
+                            .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                            .frame(width: side, height: side)
+                    } else if let url = URL(string: nft.imageURL) {
                         AsyncImage(url: url) { image in
                             image.image?.resizable().scaledToFit()
                         }

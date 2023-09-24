@@ -72,7 +72,12 @@ struct ArtPiecePickerItemView: View {
     let nft: String
     
     var body: some View {
-        if let url = URL(string: nft) {
+        if nft.contains("<svg") {
+            SVGWebView(svgString: nft)
+                .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                .frame(width: 60, height: 60)
+                .padding(.horizontal, 10)
+        } else if let url = URL(string: nft) {
             AsyncImage(url: url) { image in
                 image.image?.resizable().scaledToFit()
             }

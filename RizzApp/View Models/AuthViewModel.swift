@@ -19,7 +19,7 @@ import SwiftyJSON
 @MainActor
 class AuthViewModel: ObservableObject {
     static let instance: AuthViewModel = AuthViewModel()
-
+    
     @Published var session: Session? = nil
     @Published var nfts: [NonFungibleTokens] = []
     @Published var playlist: [String: [NonFungibleTokens]] = [:]
@@ -84,6 +84,7 @@ class AuthViewModel: ObservableObject {
                 method: .get,
                 headers: ["X-API-Key": self.moralisKey]
             )
+            print("RESULT COUNT - \(JSON(data)["result"].arrayValue.count)")
             for result in JSON(data)["result"].arrayValue {
                 let name: String? = result["name"].string
                 let metadata: String? = result["metadata"].string
@@ -103,17 +104,16 @@ class AuthViewModel: ObservableObject {
                         )
                     )
                 }
-                print(nfts)
-                for nft in self.nfts {
-                    if
-                        self.playlist[nft.collectionName]?.isEmpty != nil,
-                        !self.playlist[nft.collectionName]!.isEmpty
-                    {
-                        self.playlist[nft.collectionName]!.append(nft)
-                        continue
-                    }
-                    self.playlist[nft.collectionName] = [nft]
+            }
+            for nft in self.nfts {
+                if
+                    self.playlist[nft.collectionName]?.isEmpty != nil,
+                    !self.playlist[nft.collectionName]!.isEmpty
+                {
+                    self.playlist[nft.collectionName]!.append(nft)
+                    continue
                 }
+                self.playlist[nft.collectionName] = [nft]
             }
         }
     }

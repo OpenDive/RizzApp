@@ -14,7 +14,11 @@ struct PlaylistScrollView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(nfts) { nft in
-                    if let url = URL(string: nft.imageURL) {
+                    if nft.imageURL.contains("<svg") {
+                        SVGWebView(svgString: nft.imageURL)
+                            .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                            .frame(width: 110, height: 110)
+                    } else if let url = URL(string: nft.imageURL) {
                         AsyncImage(url: url) { image in
                             image.image?.resizable().scaledToFit()
                         }
