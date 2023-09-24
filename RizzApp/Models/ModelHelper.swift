@@ -26,9 +26,10 @@
 import UIKit
 import RealityKit
 import SceneKit
+import Kingfisher
 
 struct ModelHelper {
-    static func modelEntity(image: String) -> ModelEntity? {
+    static func modelEntity(imageUrl: String, completionHandler: @escaping (_ entity: ModelEntity?) -> Void) {
         let dimensions: SIMD3<Float> = [0.3075, 0.046, 0.3075]
 
         // Create Frame Housing
@@ -45,26 +46,40 @@ struct ModelHelper {
         // Add Contents of Frame to Frame Housing
         housingEntity.addChild(screenEntity)
         screenEntity.setPosition([0, dimensions.y / 2 + 0.001, 0], relativeTo: housingEntity)
-
-        do {
-            // Implement Texture Material onto Contents
-            let ctx = CIContext(options: nil)
-            guard
-                let uiImage = UIImage(named: image),
-                let ciImage = CIImage(image: uiImage),
-                let imageResources = ctx.createCGImage(ciImage, from: ciImage.extent)
-            else {
-                return nil
+        
+        // Implement Texture Material onto Contents
+        Self.fetchImageWithEscaping(imageURL: imageUrl) { url in
+            do {
+                guard let url = url else { throw NSError(domain: "Unable to unwrap URL", code: -1) }
+                let texture = try TextureResource.load(contentsOf: url)
+                
+                var material = SimpleMaterial()
+                material.color.texture = SimpleMaterial.Texture(texture)
+                screenEntity.model?.materials = [material]
+                
+                completionHandler(housingEntity)
+            } catch {
+                print(error)
+                completionHandler(nil)
             }
-            let texture = try TextureResource.generate(from: imageResources, options: .init(semantic: nil))
-            var material = SimpleMaterial()
-            material.color.texture = SimpleMaterial.Texture(texture)
-            screenEntity.model?.materials = [material]
-
-            return housingEntity
-        } catch {
-            print(error)
-            return nil
         }
+    }
+    
+    private static func fetchImageWithEscaping(imageURL: String, completionHandler: @escaping (_ url: URL?) -> Void) {
+        URLSession.shared.dataTask(with: URL(string: imageURL)!) { data, response, error in
+            guard let data else {
+                completionHandler(nil)
+                return
+            }
+
+            do {
+                let id = UUID().uuidString
+                try KingfisherManager.shared.cache.diskStorage.store(value: data, forKey: id)
+                let kfData = KingfisherManager.shared.cache.diskStorage.cacheFileURL(forKey: id)
+                completionHandler(kfData)
+            } catch {
+                completionHandler(nil)
+            }
+        }.resume()
     }
 }

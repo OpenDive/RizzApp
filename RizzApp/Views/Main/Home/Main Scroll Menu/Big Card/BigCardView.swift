@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct BigCardView: View {
-    let image: String
+    let nft: NonFungibleTokens
     
     var body: some View {
-        Image(image)
-            .resizable()
-            .scaledToFit()
-            .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.width - 50)
+        if let url = URL(string: nft.image) {
+            AsyncImage(url: url) { image in
+                image.image?.resizable().scaledToFit()
+            }
+                .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.width - 50)
+        } else {
+            RoundedRectangle(cornerRadius: 12.0)
+                .foregroundStyle(RizzColors.rizzGray)
+                .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.width - 50)
+        }
     }
 }
-
-#Preview {
-    BigCardView(image: "CoolCat1")
-}
+//
+//#Preview {
+//    BigCardView(image: "CoolCat1")
+//}

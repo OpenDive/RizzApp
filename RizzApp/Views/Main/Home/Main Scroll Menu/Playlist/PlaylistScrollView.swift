@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct PlaylistScrollView: View {
-    let nfts: [String]
+    let nfts: [NonFungibleTokens]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(nfts, id:\.self) { nft in
-                    Image(nft)
-                        .resizable()
-                        .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: 12.0))
-                        .frame(width: 110, height: 110)
+                ForEach(nfts) { nft in
+                    if let url = URL(string: nft.image) {
+                        AsyncImage(url: url) { image in
+                            image.image?.resizable().scaledToFit()
+                        }
+                            .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                            .frame(width: 110, height: 110)
+                    } else {
+                        RoundedRectangle(cornerRadius: 12.0)
+                            .foregroundStyle(RizzColors.rizzGray)
+                            .frame(width: 110, height: 110)
+                    }
                 }
             }
             .padding(.bottom)
@@ -31,6 +37,6 @@ struct PlaylistScrollView: View {
     }
 }
 
-#Preview {
-    PlaylistScrollView(nfts: RizzOnboarding.discover[0].NFTs)
-}
+//#Preview {
+//    PlaylistScrollView(nfts: RizzOnboarding.discover[0].NFTs)
+//}

@@ -18,6 +18,8 @@ struct MenuDockView: View {
     @State private var isShowingLabels: Bool = true
     @State private var isShowingActionMenu: Bool = false
     
+    @EnvironmentObject var authVM: AuthViewModel
+    
     var body: some View {
         ZStack {
             if isShowingActionMenu {
@@ -147,7 +149,7 @@ struct ActionButtonView: View {
                 
                 NavigationLink(
                     isActive: $displayARPressed,
-                    destination: { MainARView() },
+                    destination: { MainARView().environmentObject(authVM) },
                     label: { }
                 )
             }

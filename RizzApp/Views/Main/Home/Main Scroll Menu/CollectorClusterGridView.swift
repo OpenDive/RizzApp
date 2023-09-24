@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CollectorClusterGridView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+    
     private let items = [
         GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())
     ]
@@ -16,11 +18,18 @@ struct CollectorClusterGridView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVGrid(columns: items, spacing: 2) {
-                ForEach(RizzOnboarding.nftCollection, id:\.self) { nft in
-                    Image(nft)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: side, height: side)
+                ForEach(authViewModel.nfts) { nft in
+                    if let url = URL(string: nft.image) {
+                        AsyncImage(url: url) { image in
+                            image.image?.resizable().scaledToFit()
+                        }
+                            .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                            .frame(width: side, height: side)
+                    } else {
+                        RoundedRectangle(cornerRadius: 12.0)
+                            .foregroundStyle(RizzColors.rizzGray)
+                            .frame(width: side, height: side)
+                    }
                 }
             }
             .padding(.bottom, 140)
@@ -28,7 +37,7 @@ struct CollectorClusterGridView: View {
         .padding(.horizontal, 44)
     }
 }
-
-#Preview {
-    CollectorClusterGridView()
-}
+//
+//#Preview {
+//    CollectorClusterGridView()
+//}

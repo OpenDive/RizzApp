@@ -16,14 +16,10 @@ struct SplashScreenView: View {
             
             VStack {
                 VStack {
-                    RoundedRectangle(cornerRadius: 12.0)
-                        .foregroundStyle(RizzColors.rizzPink)
-                        .frame(width: 128, height: 128)
-                    Text("RIZZ")
-                        .font(.title)
-                        .foregroundStyle(RizzColors.rizzWhite)
-                        .padding(.top, 14)
-                        
+                    Image("RIZZLogo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 275, height: 200)
                 }
                     .padding(.bottom, 320)
                 

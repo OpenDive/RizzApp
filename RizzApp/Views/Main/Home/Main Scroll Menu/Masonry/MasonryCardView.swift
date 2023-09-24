@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct MasonryCardView: View {
-    let image: String
+    let nft: NonFungibleTokens
     
     var body: some View {
-        Image(image)
-            .resizable()
-            .scaledToFit()
-            .frame(maxWidth: 185, maxHeight: 350)
+        if let url = URL(string: nft.image) {
+            AsyncImage(url: url) { image in
+                image.image?.resizable().scaledToFit()
+            }
+                .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                .frame(maxWidth: 185, maxHeight: 350)
+        } else {
+            RoundedRectangle(cornerRadius: 12.0)
+                .foregroundStyle(RizzColors.rizzGray)
+                .frame(maxWidth: 185, maxHeight: 350)
+        }
     }
 }
 
-#Preview {
-    MasonryCardView(image: "CoolCat1")
-}
+//
+//#Preview {
+//    MasonryCardView(image: "CoolCat1")
+//}

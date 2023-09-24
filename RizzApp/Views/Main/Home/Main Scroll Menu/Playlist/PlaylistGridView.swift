@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PlaylistGridView: View {
-    let discover = RizzOnboarding.discover
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
         VStack {
             ScrollView(.vertical) {
-                ForEach(discover) { category in
-                    PlaylistCategoryView(category: category)
+                ForEach(authViewModel.playlist.keys.map { String($0) }, id: \.self) { key in
+                    PlaylistCategoryView(name: key, nfts: authViewModel.playlist[key]!)
                 }
                 .padding(.bottom, 140)
             }
@@ -22,6 +22,6 @@ struct PlaylistGridView: View {
     }
 }
 
-#Preview {
-    PlaylistGridView()
-}
+//#Preview {
+//    PlaylistGridView()
+//}

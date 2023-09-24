@@ -26,7 +26,7 @@ struct RizzAppApp: App {
                         }
                     }
             } else {
-                if self.authViewModel.hasConnectedWallet {
+                if self.authViewModel.session != nil {
                     NavigationStack {
                         AppTabView()
                             .environmentObject(self.authViewModel)

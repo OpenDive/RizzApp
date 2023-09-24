@@ -27,6 +27,7 @@ import SwiftUI
 
 struct ArtPiecePickerView: View {
     @EnvironmentObject var arViewModel: MainARViewModel
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
         ZStack {
@@ -43,12 +44,14 @@ struct ArtPiecePickerView: View {
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(RizzOnboarding.nftCollection, id: \.self) { nft in
+                        ForEach(authViewModel.nfts) { nft in
                             Button {
-                                self.arViewModel.selectedPiece = ModelHelper.modelEntity(image: nft)
+                                ModelHelper.modelEntity(imageUrl: nft.image) { entity in
+                                    self.arViewModel.selectedPiece = entity
+                                }
                                 self.arViewModel.isShowingAdder = true
                             } label: {
-                                ArtPiecePickerItemView(nft: nft)
+                                ArtPiecePickerItemView(nft: nft.image)
                             }
                         }
                     }
@@ -69,11 +72,19 @@ struct ArtPiecePickerItemView: View {
     let nft: String
     
     var body: some View {
-        Image(nft)
-            .resizable()
-            .scaledToFit()
-            .clipShape(RoundedRectangle(cornerRadius: 12.0))
-            .frame(width: 60, height: 60)
-            .padding(.horizontal, 10)
+        if let url = URL(string: nft) {
+            AsyncImage(url: url) { image in
+                image.image?.resizable().scaledToFit()
+            }
+                .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                .frame(width: 60, height: 60)
+                .padding(.horizontal, 10)
+        } else {
+            RoundedRectangle(cornerRadius: 12.0)
+                .scaledToFit()
+                .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                .frame(width: 60, height: 60)
+                .padding(.horizontal, 10)
+        }
     }
 }

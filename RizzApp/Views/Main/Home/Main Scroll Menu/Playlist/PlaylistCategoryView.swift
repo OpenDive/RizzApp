@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PlaylistCategoryView: View {
-    let category: Collection
+    let name: String
+    let nfts: [NonFungibleTokens]
     
     var body: some View {
         ZStack {
@@ -17,14 +18,14 @@ struct PlaylistCategoryView: View {
                 .foregroundStyle(RizzColors.rizzLightGray)
             
             VStack {
-                PlaylistCategoryHeaderView(name: category.title, amount: category.NFTs.count, icon: category.logo)
-                PlaylistScrollView(nfts: category.NFTs)
+                PlaylistCategoryHeaderView(name: name, amount: nfts.count)
+                PlaylistScrollView(nfts: nfts)
             }
         }
         .padding(.vertical, 0.25)
     }
 }
 
-#Preview {
-    PlaylistCategoryView(category: RizzOnboarding.discover[0])
-}
+//#Preview {
+//    PlaylistCategoryView(category: RizzOnboarding.discover[0])
+//}
