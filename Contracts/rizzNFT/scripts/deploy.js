@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const R = await hre.ethers.getContractFactory("RizzaERC1155");
-  const r = await R.deploy();
+  const r = await R.deploy({ gasPrice: 5000000000, gasLimit: 4000000 });
 
   await r.deployed();
 

@@ -34,6 +34,15 @@ module.exports = {
         },
       },
       {
+        version: "0.8.1",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
         version: "0.8.4",
         settings: {
           optimizer: {
@@ -45,7 +54,7 @@ module.exports = {
     ],
   },
   networks: {
-    ropsten: {
+    goerli: {
       url: process.env.GOERLI_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],

@@ -11,7 +11,7 @@ import {
   NFTPaymaster__factory,
   VerifyingPaymaster__factory,
   MockNFT,
-  MockNFT__Factory,
+  MockNFT__factory,
 } from "../typechain";
 import {
   createAccount,
@@ -45,11 +45,15 @@ describe("EntryPoint with VerifyingPaymaster", function () {
     this.timeout(20000);
     console.log("deploy entry");
     entryPoint = await deployEntryPoint();
-
+    console.log("deploy offchain signer");
     offchainSigner = createAccountOwner();
+    console.log("deploy account owner");
     accountOwner = createAccountOwner();
-    const values = [[offchainSigner.getAddress()], [accountOwner.getAddress()]];
-
+    const values = [
+      [await offchainSigner.getAddress()],
+      [await accountOwner.getAddress()],
+    ];
+    console.log(values);
     // (2)
     tree = StandardMerkleTree.of(values, ["address"]);
     console.log("deploy account");
@@ -57,7 +61,7 @@ describe("EntryPoint with VerifyingPaymaster", function () {
       entryPoint.address
     );
     console.log("deploy mock nft");
-    mock = await new MockNFT__Factory(ethersSigner).deploy(entryPoint.address);
+    mock = await new MockNFT__factory(ethersSigner).deploy();
     console.log("deploy paymaster");
     paymaster = await new NFTPaymaster__factory(ethersSigner).deploy(
       entryPoint.address,
@@ -76,21 +80,25 @@ describe("EntryPoint with VerifyingPaymaster", function () {
   describe("#validatePaymasterUserOp", () => {
     it("succeed with valid signature", async () => {
       const SimpleAccount = await ethers.getContractFactory("SimpleAccount");
+
       const executeMint = mock.interface.encodeFunctionData("ProxyMint", [
         offchainSigner.address,
         1,
       ]);
+      console.log(executeMint);
       let _callData = SimpleAccount.interface.encodeFunctionData("execute", [
         offchainSigner.address,
         0,
         executeMint,
       ]);
+      console.log(_callData);
       let proof = tree.getProof(0);
+      console.log(proof);
       let bytes = ethers.utils.defaultAbiCoder.encode(
         ["address", "bytes32[]"],
         [paymaster.address, proof]
       );
-
+      console.log(bytes);
       const userOp = await fillAndSign(
         {
           sender: account.address,
@@ -100,7 +108,7 @@ describe("EntryPoint with VerifyingPaymaster", function () {
         accountOwner,
         entryPoint
       );
-
+      console.log(userOp);
       const res = await simulateValidation(userOp, entryPoint.address);
       expect(res.returnInfo.sigFailed).to.be.false;
       expect(res.returnInfo.validAfter).to.be.equal(
