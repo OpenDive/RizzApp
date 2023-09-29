@@ -3,7 +3,7 @@ pragma solidity ^0.8.12;
 
 /* solhint-disable reason-string */
 /* solhint-disable no-inline-assembly */
-
+import "hardhat/console.sol";
 import "./core/BasePaymaster.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
@@ -45,7 +45,7 @@ contract NFTPaymaster is BasePaymaster {
         bytes32 merkleroot,
         bytes32[] memory proof
     ) internal pure returns (bool) {
-        bytes32 leaf = keccak256(abi.encodePacked(a));
+        bytes32 leaf = keccak256(bytes.concat(keccak256((abi.encode(a)))));
         return MerkleProof.verify(proof, merkleroot, leaf);
     }
 
@@ -64,7 +64,7 @@ contract NFTPaymaster is BasePaymaster {
         (requiredPreFund);
 
         bytes32[] memory proof = parsePaymasterAndData(userOp.paymasterAndData);
-
+        require(proof.length >= 1, "invalid proof length");
         (address tokenAddr, uint256 callValue, ) = abi.decode(
             userOp.callData[4:], // skip selector
             (address, uint256, bytes)
@@ -87,9 +87,14 @@ contract NFTPaymaster is BasePaymaster {
         );
         (address a, uint256 id) = abi.decode(data[4:], (address, uint256));
         require(id == tokenid, "invalid token id mint");
-        address signer = ECDSA.recover(userOpHash, userOp.signature);
+        address signer = ECDSA.recover(
+            userOpHash.toEthSignedMessageHash(),
+            userOp.signature
+        );
 
-        if (!verifyProof(signer, merkleRoot, proof)) {
+        bool proofCheck = verifyProof(signer, merkleRoot, proof);
+
+        if (!proofCheck) {
             return ("", _packValidationData(true, 0, 0));
         }
         require(used[signer] == false, "signers can only be used once");
@@ -102,9 +107,12 @@ contract NFTPaymaster is BasePaymaster {
     function parsePaymasterAndData(
         bytes calldata paymasterAndData
     ) public pure returns (bytes32[] memory) {
+        //console.log(paymasterAndData.length);
+        //console.log(string(paymasterAndData));
         bytes32[] memory proof = abi.decode(
             paymasterAndData[VALID_TIMESTAMP_OFFSET:],
             (bytes32[])
         );
+        return proof;
     }
 }

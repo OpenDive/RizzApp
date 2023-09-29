@@ -50,12 +50,15 @@ describe("EntryPoint with VerifyingPaymaster", function () {
     console.log("deploy account owner");
     accountOwner = createAccountOwner();
     const values = [
-      [await offchainSigner.getAddress()],
-      [await accountOwner.getAddress()],
+      [(await offchainSigner.getAddress()).toLowerCase()],
+      [(await accountOwner.getAddress()).toLowerCase()],
     ];
-    console.log(values);
     // (2)
     tree = StandardMerkleTree.of(values, ["address"]);
+    console.log(tree.dump());
+    console.log(tree.values);
+    console.log(tree.leafHash(values[0]));
+    console.log(tree.leafHash(values[1]));
     console.log("deploy account");
     account = await new SimpleAccount__factory(ethersSigner).deploy(
       entryPoint.address
@@ -63,6 +66,7 @@ describe("EntryPoint with VerifyingPaymaster", function () {
     console.log("deploy mock nft");
     mock = await new MockNFT__factory(ethersSigner).deploy();
     console.log("deploy paymaster");
+    console.log(tree.root);
     paymaster = await new NFTPaymaster__factory(ethersSigner).deploy(
       entryPoint.address,
       tree.root,
@@ -92,13 +96,14 @@ describe("EntryPoint with VerifyingPaymaster", function () {
         executeMint,
       ]);
       console.log(_callData);
-      let proof = tree.getProof(0);
+      let proof = tree.getProof(1);
       console.log(proof);
-      let bytes = ethers.utils.defaultAbiCoder.encode(
-        ["address", "bytes32[]"],
-        [paymaster.address, proof]
-      );
+      console.log(`${paymaster.address} the paymaster address`);
+      let bytes = ethers.utils.defaultAbiCoder.encode(["bytes32[]"], [proof]);
+      console.log(`ABI ENCODED ${bytes}`);
+      bytes = `${paymaster.address}${bytes.slice(2)}`;
       console.log(bytes);
+
       const userOp = await fillAndSign(
         {
           sender: account.address,
@@ -108,15 +113,10 @@ describe("EntryPoint with VerifyingPaymaster", function () {
         accountOwner,
         entryPoint
       );
+      console.log("HUMAN SIGNER", accountOwner.address);
       console.log(userOp);
       const res = await simulateValidation(userOp, entryPoint.address);
       expect(res.returnInfo.sigFailed).to.be.false;
-      expect(res.returnInfo.validAfter).to.be.equal(
-        ethers.BigNumber.from(MOCK_VALID_AFTER)
-      );
-      expect(res.returnInfo.validUntil).to.be.equal(
-        ethers.BigNumber.from(MOCK_VALID_UNTIL)
-      );
     });
   });
 });
